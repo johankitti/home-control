@@ -1,0 +1,84 @@
+body {
+    overflow:hidden;
+}
+
+/* WEATHER WIDGET */
+
+.weather-box {
+    width: 100%;
+    float:left;
+    margin-bottom: 20px;
+}
+.weather-box-small {
+    float: left;
+    font-size: 20px;
+    margin: auto;
+}
+
+.weather-windbox {
+    margin-top: 20px;
+}
+
+.wi-big {
+    font-size: 120px;
+    margin-right: 10px;
+    margin-left: 10px;
+    float: left;
+    width: 30%
+}
+
+.wi-small {
+    font-size: 30px;
+}
+
+weather-h1 {
+    float: left;
+    font-size: 60px;
+    font-weight: bold;
+    width: 60%;
+}
+
+/* NÅT ANNAT */
+
+.header {
+    float: left;
+    width: 100%;
+    text-align: center;
+    color: white;
+    background-color: black;
+}
+
+.container-fluid {
+    background-image: url('../assets/images/bg.jpg');
+    min-height: 100%;
+    color: white;
+}
+
+.rubrik {
+    float: left;
+}
+.col-lg-4 {
+    float: left;
+}
+
+.col-lg-12, .col-lg-6 {
+    background-color:rgba(0,0,0,0.2);
+    padding-top: 10px !important;
+    padding: 15px;
+    margin-bottom:300px;
+}
+
+.col-lg-6 {
+    width: 47.4% !important;
+}
+
+.progress .bar.six-sec-ease-in-out {
+    -webkit-transition: width 6s ease-in-out;
+    -moz-transition: width 6s ease-in-out;
+    -ms-transition: width 6s ease-in-out;
+    -o-transition: width 6s ease-in-out;
+    transition: width 6s ease-in-out;
+}
+.col-lg-2 {
+    text-align: center;
+}

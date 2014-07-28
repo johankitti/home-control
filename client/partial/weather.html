@@ -1,0 +1,28 @@
+<div ng-controller="WeatherCtrl as weatherCtrl">
+    <div class="rubrik">
+        <h1>Väder</h1><p>{{weatherCtrl.weatherNow.name}}, {{weatherCtrl.weatherNow.sys.country}}</p>
+    </div>
+    <div class="col-lg-12">
+        <div class="weather-box">
+            <i class="wi-big {{weatherCtrl.getWeatherIcon(weatherCtrl.weatherNow.weather[0].id)}}"></i>
+            <weather-h1 style="text-align:left;">{{weatherCtrl.getWeekDay(0)}}</weather-h1>
+            <weather-h1>{{weatherCtrl.fromKalvinToCelcius(weatherCtrl.weatherNow.main.temp) | number:1}}°C</weather-h1>
+            <div class="weather-windbox">
+                <p style="font-weight:bold;">Vind</p>
+                <i class="wi-small wi-strong-wind"></i>
+                <p>{{weatherCtrl.weatherNow.wind.speed}} m/s</p>
+            </div>
+        </div>
+        <div ng-repeat="day in weatherCtrl.weatherWeek.list | limitTo: -6" class="col-lg-2 weather-box-small">
+            <p style="text-align:left;">{{weatherCtrl.getWeekDay($index + 1)}}</p>
+            <i class="wi-small {{weatherCtrl.getWeatherIcon(weatherCtrl.weatherWeek.list[$index + 1].weather[0].id)}}"></i>
+            {{weatherCtrl.fromKalvinToCelcius(day.temp.day) | number:1}}°C
+            <div style="color:black;">{{weatherCtrl.fromKalvinToCelcius(day.temp.night) | number:1}}°C</div>
+        </div>
+        <!--
+        http://api.openweathermap.org/data/2.5/weather?lat=59.346970,&lon=17.976177
+        http://api.openweathermap.org/data/2.5/forecast/daily?id=6930654
+        http://openweathermap.org/weather-conditions
+        -->
+    </div>
+</div>
