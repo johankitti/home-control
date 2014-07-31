@@ -1,14 +1,27 @@
-<div class="rubrik">
-    <h1>Schema asdsdasdasad</h1><p>Tori, Kitti</p>
-</div>
-<div class="col-lg-6">
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris porttitor, ante vel congue consectetur, turpis orci tincidunt arcu, et dignissim neque urna sit amet sem. Nullam dignissim varius varius. Sed ultrices quis mauris commodo faucibus. Vivamus tristique nunc eu est interdum, a condimentum lorem vehicula. Mauris pellentesque accumsan ligula, sed congue magna. Integer vehicula ornare quam vitae volutpat. Maecenas pulvinar ante molestie felis porta molestie. Nunc lectus massa, congue at mollis vel, posuere vel nibh. Aliquam at enim quis turpis pretium fringilla scelerisque vel odio. Duis varius ultricies lectus, vel lacinia nisl egestas quis. Maecenas vestibulum dolor nec adipiscing ornare. Vestibulum sed erat metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec convallis est erat, sed vestibulum sapien dignissim sed. Aenean id suscipit nulla. Mauris vestibulum tellus quis elementum bibendum.
-    </p>
-</div>
-<div class="col-lg-6" style="float:right;">
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris porttitor, ante vel congue consectetur, turpis orci tincidunt arcu, et dignissim neque urna sit amet sem. Nullam dignissim varius varius. Sed ultrices quis mauris commodo faucibus. Vivamus tristique nunc eu est interdum, a condimentum lorem vehicula. Mauris pellentesque accumsan ligula, sed congue magna. Integer vehicula ornare quam vitae volutpat. Maecenas pulvinar ante molestie felis porta molestie. Nunc lectus massa, congue at mollis vel, posuere vel nibh. Aliquam at enim quis turpis pretium fringilla scelerisque vel odio. Duis varius ultricies lectus, vel lacinia nisl egestas quis. Maecenas vestibulum dolor nec adipiscing ornare. Vestibulum sed erat metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec convallis est erat, sed vestibulum sapien dignissim sed. Aenean id suscipit nulla. Mauris vestibulum tellus quis elementum bibendum.
-        dis parturient montes, nascetur ridiculus mus. Donec conasdasdasdvallis est erat, sed vestibulum sapiesdfdsfsdfdfsn dignissim sed. Aenean id suscipit nulla. Mauris vestibulum tellus quis elementum bibendum.
-    </p>
+<div ng-controller="ScheduleCtrl as scheduleCtrl">
+    <div class="rubrik">
+        <h1>Schema asdsdasdasad</h1><p>{{scheduleCtrl.kittiSchedule.summary}}, {{scheduleCtrl.toriSchedule.summary}}</p>
+    </div>
+    <div class="col-lg-6">
+        <div class="schedule-bg">
+            <div ng-repeat="event in scheduleCtrl.kittiSchedule.items">
+                <div class="schedule-event">
+                    {{}}
+                    <b>{{event.start.dateTime | date:'H:mm'}} - {{event.end.dateTime | date:'H:mm'}}</b><br>
+                    {{event.summary}}<br>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6" style="float:right;">
+        <div class="schedule-bg">
+            <div ng-repeat="event in scheduleCtrl.toriSchedule.items">
+                <div class="schedule-event">
+                    {{}}
+                    <b>{{event.start.dateTime | date:'H:mm'}} - {{event.end.dateTime | date:'H:mm'}}</b><br>
+                    {{event.summary}}<br>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

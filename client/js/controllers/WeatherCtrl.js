@@ -2,15 +2,22 @@
 
 (function() {
     'use strict';
-    var WeatherCtrl = function($timeout, weatherService, converterService) {
+    var WeatherCtrl = function($timeout, weatherService, utilityService) {
         this.timeout = $timeout;
 
         this.weatherService = weatherService;
-        this.converterService = converterService;
+        this.utilityService = utilityService;
 
         this.weatherUpdateFrequency = 3; //minutes
         this.getWeather();
         this.update();
+    };
+
+    WeatherCtrl.prototype.update = function() {
+        this.timeout(function() {
+            this.getWeather();
+            this.update();
+        }.bind(this), 60000 * this.weatherUpdateFrequency);
     };
 
     WeatherCtrl.prototype.getWeather = function() {
@@ -25,20 +32,13 @@
         }.bind(this));
     };
 
-    WeatherCtrl.prototype.update = function() {
-        this.timeout(function() {
-            this.getWeather();
-            this.update();
-        }.bind(this), 60000 * this.weatherUpdateFrequency);
-    };
-
     WeatherCtrl.prototype.fromKalvinToCelcius = function(kalvin) {
-        return this.converterService.fromKalvinToCelcius(kalvin);
+        return this.utilityService.fromKalvinToCelcius(kalvin);
     };
 
     WeatherCtrl.prototype.getWeekDay = function(day) {
         // 0 = today, 1 = tomorrow.... etc
-        return this.converterService.getWeekDay(day);
+        return this.utilityService.getWeekDay(day);
     };
 
     WeatherCtrl.prototype.getWeatherIcon = function(weatherId) {

@@ -2,8 +2,9 @@
 
 (function() {
     'use strict';
-    var weatherService = function(restService) {
+    var weatherService = function(restService, utilityService) {
         this.restService = restService;
+        this.utilityService = utilityService;
 
         this.weatherIcons = {
             200: 'wi-thunderstorm',
