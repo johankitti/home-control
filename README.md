@@ -7,7 +7,7 @@ Modules
 - Weather (based on open weather API)
 - Daily calendar (google calendar API)
 
-Module Proposals
+Module proposals
 ============
 - Public transportation
 - Food trucks. Any foodtrucks near?
