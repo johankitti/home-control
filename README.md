@@ -13,6 +13,7 @@ Controllers/Services
 (function () {
     'use strict';
     var AppCtrl = function ($scope, someService) {
+	//var appService = function ($scope, someOtherService) {
         this.scope = $scope;
     
         this.someService = someService;
@@ -23,7 +24,7 @@ Controllers/Services
     };
     
     yourAmazingApp.controller('AppCtrl', AppCtrl);
-    //yourAmazingApp.service('AppCtrl', AppCtrl);
+    //yourAmazingApp.service('appService', appService);
 }());
 ```
 
