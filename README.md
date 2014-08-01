@@ -9,6 +9,7 @@ dashboard for your home
 
 Controllers/Services
 ============
+```
 (function () {
     'use strict';
     var AppCtrl = function ($scope, someService) {
@@ -18,14 +19,16 @@ Controllers/Services
     };
 
     AppCtrl.prototype.aNiceFunction = function() {
-		//Do stuff here
+	//Do stuff here
     };
     
     yourAmazingApp.controller('AppCtrl', AppCtrl);
 }());
+```
 
 Filters
 ============
+```
 (function () {
     'use strict';
     yourAmazingApp.filter('someFilter', function () {
@@ -35,3 +38,4 @@ Filters
         };
     });
 }());
+```
