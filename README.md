@@ -1,11 +1,6 @@
-home-control
+About
 ============
-dashboard for your home
-
-
-
-/* ANGULAR stuff */
-============
+A dashboard for your home.
 
 General guidelines
 ============
