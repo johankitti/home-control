@@ -2,6 +2,16 @@ About
 ============
 A dashboard for your home.
 
+Modules
+============
+- Weather (based on open weather API)
+- Daily calendar (google calendar API)
+
+Module Proposals
+============
+- Public transportation
+- Food trucks. Any foodtrucks near?
+
 General guidelines
 ============
 - $scope is only to be used when there is no other way to solve a problem
