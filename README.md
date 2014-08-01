@@ -23,6 +23,7 @@ Controllers/Services
     };
     
     yourAmazingApp.controller('AppCtrl', AppCtrl);
+    //yourAmazingApp.service('AppCtrl', AppCtrl);
 }());
 ```
 
