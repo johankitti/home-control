@@ -19,7 +19,7 @@ Controllers/Services
     };
 
     AppCtrl.prototype.aNiceFunction = function() {
-	//Do stuff here
+		//Do stuff here
     };
     
     yourAmazingApp.controller('AppCtrl', AppCtrl);
