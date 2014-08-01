@@ -1,4 +1,3 @@
-============
 home-control
 ============
 dashboard for your home
@@ -6,10 +5,10 @@ dashboard for your home
 
 
 /* ANGULAR stuff */
+============
 
-====================
 Controllers/Services
-====================
+============
 (function () {
     'use strict';
     var AppCtrl = function ($scope, someService) {
@@ -19,15 +18,14 @@ Controllers/Services
     };
 
     AppCtrl.prototype.aNiceFunction = function() {
-        //Do stuff here
+		//Do stuff here
     };
     
     yourAmazingApp.controller('AppCtrl', AppCtrl);
 }());
 
-=======
 Filters
-=======
+============
 (function () {
     'use strict';
     yourAmazingApp.filter('someFilter', function () {
