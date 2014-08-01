@@ -1,6 +1,6 @@
-home-control
+About
 ============
-dashboard for your home
+A dashboard for your home.
 
 General guidelines
 ============
