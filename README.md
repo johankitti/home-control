@@ -2,11 +2,6 @@ home-control
 ============
 dashboard for your home
 
-
-
-/* ANGULAR stuff */
-============
-
 General guidelines
 ============
 - $scope is only to be used when there is no other way to solve a problem
