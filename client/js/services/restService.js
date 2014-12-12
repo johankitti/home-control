@@ -12,18 +12,38 @@
 
     //WEATHER REST SERVICES
 
-    restService.prototype.loadWeatherWeek = function(callback) {
+    restService.prototype.loadWeatherWeek = function() {
         return this.http.get('http://api.openweathermap.org/data/2.5/forecast/daily?id=2675397');
     };
 
-    restService.prototype.loadWeatherNow = function(callback) {
+    restService.prototype.loadWeatherNow = function() {
         return this.http.get('http://api.openweathermap.org/data/2.5/weather?q=Solna');
     };
 
     //TRANSPORT REST SERVICES
 
-    restService.prototype.loadStationInfo = function() {
-        return this.http.get('http://api.sl.se/api2/realtimedepartures.json?key=cc5b7ec9a8c4452cbb2977d3421054a4&siteid=9326&timewindow=%3CTIMEWINDOW%3E');
+    restService.prototype.loadTransportInfo = function(dest, station, type) {
+      var key = '1bb9289097dc4600aa260b49b9363245';
+      var destination = dest;
+      var fromStation = station;
+      var exclude = '';
+      var transportType = type;
+
+      switch(transportType) {
+          case 'metro':
+              exclude += '&useTram=0';
+              exclude += '&useBus=0';
+              break;
+          case 'bus':
+              exclude += '&useTram=0';
+              exclude += '&useMetro=0';
+              break;
+          case 'tram':
+              exclude += '&useBus=0';
+              exclude += '&useMetro=0';
+              break;
+      }
+      return this.http.get('http://www.corsproxy.com/api.sl.se/api2/TravelplannerV2/trip.%3CFORMAT%3E?key=' + key + '&originId=' + fromStation + '&destId=' + destination + exclude);
     };
 
     //SCHEDULE REST SERVICE

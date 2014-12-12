@@ -5,47 +5,38 @@
     <div class="col-lg-12">
         <div class="transport">
             <h4 style="text-align:center;">Vreten (tunnelbana)</h4>
-            <h5>Mot T-centralen</h5>
+            <h5>Mot T-centralen ({{transportCtrl.getTimeLeft(0)}})</h5>
             <div class="progress">
-                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-                    60%
-                </div>
+                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: {{transportCtrl.getPercentage(0)}}%;"></div>
             </div>
-            <h5>Mot Hjulsta</h5>
+            <h5>Mot Hjulsta ({{transportCtrl.getTimeLeft(1)}})</h5>
             <div class="progress">
-                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-                    60%
-                </div>
+                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: {{transportCtrl.getPercentage(1)}}%;"></div>
             </div>
         </div>
         <div class="transport">
             <h4 style="text-align:center;">Johannesfred (tvärbana)</h4>
-            <h5>Mot Alvik</h5>
+            <h5>Mot Alvik  ({{transportCtrl.getTimeLeft(2)}})</h5>
             <div class="progress">
-                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-                    60%
-                </div>
+                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: {{transportCtrl.getPercentage(2)}}%;"></div>
             </div>
-            <h5>Mot Solna C</h5>
+            <h5>Mot Solna C ({{transportCtrl.getTimeLeft(3)}})</h5>
             <div class="progress">
-                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-                    60%
-                </div>
+                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: {{transportCtrl.getPercentage(3)}}%;"></div>
             </div>
         </div>
         <div class="transport">
             <h4 style="text-align:center;">Johannesfred (buss)</h4>
-            <h5>Mot Alvik</h5>
+            <h5>Mot Alvik ({{transportCtrl.getTimeLeft(4)}})</h5>
             <div class="progress">
-                <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-                    60%
-                </div>
+                <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: {{transportCtrl.getPercentage(4)}}%;"></div>
             </div>
-            <h5>Mot Danderyd</h5>
+        </div>
+        <div class="transport">
+            <h4 style="text-align:center;">Voltavägen (buss)</h4>
+            <h5>Mot Mörby Centrum ({{transportCtrl.getTimeLeft(5)}})</h5>
             <div class="progress">
-                <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-                    60%
-                </div>
+                <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: {{transportCtrl.getPercentage(5)}}%;"></div>
             </div>
         </div>
     </div>
