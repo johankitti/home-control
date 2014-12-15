@@ -1,29 +1,33 @@
 <div ng-controller="ScheduleCtrl as scheduleCtrl">
     <div class="rubrik">
-        <h1>Schema</h1><p>{{scheduleCtrl.kittiSchedule.summary}}, {{scheduleCtrl.toriSchedule.summary}}</p>
+        <h1>Schema</h1><p>Idag</p>
     </div>
     <div class="col-lg-12">
-        <div class="col-lg-6">
-            <div class="schedule-bg">
-                <div ng-repeat="event in scheduleCtrl.kittiSchedule.items">
-                    <div class="schedule-event">
-                        {{}}
-                        <b>{{event.start.dateTime | date:'H:mm'}} - {{event.end.dateTime | date:'H:mm'}}</b><br>
-                        {{event.summary}}<br>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-6" style="float:right;">
-            <div class="schedule-bg">
-                <div ng-repeat="event in scheduleCtrl.toriSchedule.items">
-                    <div class="schedule-event">
-                        {{}}
-                        <b>{{event.start.dateTime | date:'H:mm'}} - {{event.end.dateTime | date:'H:mm'}}</b><br>
-                        {{event.summary}}<br>
-                    </div>
-                </div>
-            </div>
-        </div>
+      <div class="col-lg-6">
+        {{scheduleCtrl.schedules[0].scheduleData.summary}}
+      </div>
+      <div class="col-lg-6" style="float:right;">
+        {{scheduleCtrl.schedules[1].scheduleData.summary}}
+      </div>
+      <div class="col-lg-6">
+          <div class="schedule-bg">
+              <div ng-repeat="event in scheduleCtrl.schedules[0].scheduleData.items | orderBy:event.start.dateTime">
+                  <div class="schedule-event">
+                      <b>{{event.start.dateTime | date:'H:mm'}} - {{event.end.dateTime | date:'H:mm'}}</b><br>
+                      {{event.summary}}<br>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="col-lg-6" style="float:right;">
+          <div class="schedule-bg">
+              <div ng-repeat="event in scheduleCtrl.schedules[1].scheduleData.items | orderBy:event.start.dateTime">
+                  <div class="schedule-event">
+                      <b>{{event.start.dateTime | date:'H:mm'}} - {{event.end.dateTime | date:'H:mm'}}</b><br>
+                      {{event.summary}}<br>
+                  </div>
+              </div>
+          </div>
+      </div>
     </div>
 </div>

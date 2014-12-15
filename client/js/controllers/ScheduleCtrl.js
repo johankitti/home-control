@@ -3,21 +3,23 @@
 (function() {
     'use strict';
     var ScheduleCtrl = function(scheduleService) {
-        this.scheduleService = scheduleService;
+      this.scheduleService = scheduleService;
 
-        this.getSchedule();
+      this.schedules = [
+        {email: 'real.kitti@gmail.com', scheduleData: {}},
+        {email: 'grahn.viktoria@gmail.com', scheduleData: {}}
+      ];
+
+      this.getSchedule();
     };
 
     ScheduleCtrl.prototype.getSchedule = function() {
-        this.scheduleService.loadKittiSchedule(function() {
-            this.kittiSchedule = this.scheduleService.getKittiSchedule();
-            window.console.log(this.kittiSchedule);
-        }.bind(this));
-
-        this.scheduleService.loadToriSchedule(function() {
-            this.toriSchedule = this.scheduleService.getToriSchedule();
-            window.console.log(this.toriSchedule);
-        }.bind(this));
+      for (var i = 0; i < this.schedules.length; i++) {
+        console.log(this.schedules[i]);
+        this.scheduleService.loadSchedule(this.schedules[i].email, function(i) {
+          this.schedules[i].scheduleData = this.scheduleService.getSchedule();
+        }.bind(this, i));
+      }
     };
 
     homeDashboard.controller('ScheduleCtrl', ScheduleCtrl);

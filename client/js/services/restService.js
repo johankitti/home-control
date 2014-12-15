@@ -23,46 +23,30 @@
     //TRANSPORT REST SERVICES
 
     restService.prototype.loadTransportInfo = function(dest, station, type) {
-      var key = '1bb9289097dc4600aa260b49b9363245';
-      var destination = dest;
-      var fromStation = station;
-      var exclude = '';
-      var transportType = type;
+        var key = '1bb9289097dc4600aa260b49b9363245';
+        var exclude = '';
+        var extraParams = '&numChg=0&useTrain=0';
 
-      switch(transportType) {
-          case 'metro':
-              exclude += '&useTram=0';
-              exclude += '&useBus=0';
-              break;
-          case 'bus':
-              exclude += '&useTram=0';
-              exclude += '&useMetro=0';
-              break;
-          case 'tram':
-              exclude += '&useBus=0';
-              exclude += '&useMetro=0';
-              break;
-      }
-      return this.http.get('http://www.corsproxy.com/api.sl.se/api2/TravelplannerV2/trip.%3CFORMAT%3E?key=' + key + '&originId=' + fromStation + '&destId=' + destination + exclude);
+        switch(type) {
+            case 'metro':
+                exclude = extraParams + '&useTram=0&useBus=0';
+                break;
+            case 'bus':
+                exclude = extraParams + '&useTram=0&useMetro=0';
+                break;
+            case 'tram':
+              exclude = extraParams + '&useBus=0&useMetro=0';
+                break;
+        }
+        return this.http.get('/api/transport/' + key + '/' + dest + '/' + station + '/' + exclude);
     };
 
     //SCHEDULE REST SERVICE
 
-    restService.prototype.loadKittiSchedule = function() {
+    restService.prototype.loadSchedule = function(email) {
         var d = String(moment().format());
         d = d.split('T')[0];
-        var calendarId = 'real.kitti%40gmail.com';
-        var timeMax = d + 'T23%3A59%3A59%2B02%3A00';
-        var timeMin = d + 'T00%3A00%3A00%2B02%3A00';
-        var apiKey = 'AIzaSyDyP7EFmzjuK6Z9TqSbbhVLOIQRgBNmdYI';
-        var url = 'https://www.googleapis.com/calendar/v3/calendars/' + calendarId + '/events?timeMax=' + timeMax + '&timeMin=' + timeMin + '&key=' + apiKey;
-        return this.http.get(url);
-    };
-
-    restService.prototype.loadToriSchedule = function() {
-        var d = String(moment().format());
-        d = d.split('T')[0];
-        var calendarId = 'real.kitti%40gmail.com';
+        var calendarId = email;
         var timeMax = d + 'T23%3A59%3A59%2B02%3A00';
         var timeMin = d + 'T00%3A00%3A00%2B02%3A00';
         var apiKey = 'AIzaSyDyP7EFmzjuK6Z9TqSbbhVLOIQRgBNmdYI';

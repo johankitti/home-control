@@ -3,20 +3,21 @@
 
 (function() {
     'use strict';
-    var TransportCtrl = function($timeout, transportService) {
+    var TransportCtrl = function($timeout, transportService, utilityService) {
       this.timeout = $timeout;
 
       this.transportService = transportService;
+      this.utilityService = utilityService;
 
       this.transportationUpdateFrequency = 5; //minutes
       this.barUpdateFrequency = 1; //sekunder
 
       this.timeFormat = 'HH:mm:ss';
       this.transportTimers = [
-        {dest: 't-centralen', station: 'vreten', type: 'metro', departures: []},
+        {dest: 'huvudsta', station: 'vreten', type: 'metro', departures: []},
         {dest: 'hjulsta', station: 'vreten', type: 'metro', departures: []},
         {dest: 'alvik', station: 'johannesfred', type: 'tram', departures: []},
-        {dest: 'solna c', station: 'johannesfred', type: 'tram', departures: []},
+        {dest: 'solna', station: 'johannesfred', type: 'tram', departures: []},
         {dest: 'alvik', station: 'johannesfred', type: 'bus', departures: []},
         {dest: 'danderyd', station: 'voltavagen', type: 'bus', departures: []}
       ];
@@ -44,7 +45,7 @@
     TransportCtrl.prototype.clearSchedule = function() {
         for (var i = 0; i < this.transportTimers.length; i++) {
             var time = this.getTimeDifferenceSeconds(this.transportTimers[i].departures[1], this.getCurrentTime());
-            if (time > 0) {
+            if (time > 0 && time < 43200) {
                 this.transportTimers[i].departures.shift();
             }
         }
@@ -55,17 +56,11 @@
     };
 
     TransportCtrl.prototype.getCurrentTime = function() {
-        return moment().add(6, 'hours').format(this.timeFormat);
+      return this.utilityService.getCurrentTime();
     };
 
     TransportCtrl.prototype.getTimeDifferenceSeconds = function(firstTime, secondTime) {
-        if (firstTime && secondTime) {
-          var timeSplit1 = firstTime.split(':');
-          var timeSplit2 = secondTime.split(':');
-          var a = moment([2001, 0, 28, timeSplit1[0], timeSplit1[1], timeSplit1[2]]);
-          var b = moment([2001, 0, 28, timeSplit2[0], timeSplit2[1], timeSplit2[2]]);
-          return b.diff(a, 'seconds');
-        }
+      return this.utilityService.getTimeDifferenceSeconds(firstTime, secondTime);
     };
 
     TransportCtrl.prototype.getTimeDifference = function(firstTime, secondTime) {
@@ -81,28 +76,29 @@
 
     TransportCtrl.prototype.getTransportInfo = function() {
         for (var j = 0; j < this.transportTimers.length; j++) {
-            this.transportService.loadTransportInfo(this.transportTimers[j].dest, this.transportTimers[j].station, this.transportTimers[j].type, function (j) {
-              var data = this.transportService.getTransportInfo();
-              if (this.transportTimers[j].departures.length < 1) {
-                  this.transportTimers[j].departures.push(this.getCurrentTime());
-              }
-              for (var i = 0; i < data.Trip.length; i++) {
-                var departure = '';
-                if (data.Trip[i].LegList.Leg.constructor !== Array) {
-                  departure = data.Trip[i].LegList.Leg.Origin.time;
-                    if (this.transportTimers[j].departures.indexOf(departure) === -1) {
-                        this.transportTimers[j].departures.push(departure);
-                    }
-                }
-                else {
-                    departure = data.Trip[i].LegList.Leg[j].Origin.time;
-                    if (this.transportTimers[j].departures.indexOf(departure) === -1) {
-                      this.transportTimers[j].departures.push(departure);
-                    }
+          this.transportService.loadTransportInfo(this.transportTimers[j].dest, this.transportTimers[j].station, this.transportTimers[j].type, function (j) {
+            var data = this.transportService.getTransportInfo();
+            if (this.transportTimers[j].departures.length < 1) {
+              this.transportTimers[j].departures.push(this.getCurrentTime());
+              console.log(this.transportTimers[j].departures);
+            }
+            for (var i = 0; i < data.Trip.length; i++) {
+              var departure = '';
+              if (data.Trip[i].LegList.Leg.constructor !== Array) {
+                departure = data.Trip[i].LegList.Leg.Origin.time;
+                if (this.transportTimers[j].departures.indexOf(departure) === -1) {
+                    this.transportTimers[j].departures.push(departure);
                 }
               }
-              //window.console.log(this.transportTimers);
-            }.bind(this, j));
+              else {
+                departure = data.Trip[i].LegList.Leg[0].Origin.time;
+                if (this.transportTimers[j].departures.indexOf(departure) === -1) {
+                  this.transportTimers[j].departures.push(departure);
+                }
+              }
+            }
+            window.console.log(this.transportTimers);
+          }.bind(this, j));
         }
     };
     homeDashboard.controller('TransportCtrl', TransportCtrl);
