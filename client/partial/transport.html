@@ -1,10 +1,10 @@
 <div ng-controller="TransportCtrl as transportCtrl">
   <div class="rubrik">
-    <h1>Lokaltrafik</h1><p>Tunnelbana / Buss / Tvärbana</p>
+    <h1>Lokaltrafik</h1><p>Tunnelbana / Tvärbana / Buss</p>
   </div>
   <div class="col-lg-12">
     <div class="transport">
-      <h4 style="text-align:center;">Vreten (tunnelbana)</h4>
+      <h4 style="text-align:center;">Solna Strand (tunnelbana)</h4>
       <h5>Mot T-centralen ({{transportCtrl.getTimeLeft(0)}})<p style="float:right; font-weight:normal; font-size: 12px">{{transportCtrl.transportTimers[0].departures[1] + "&nbsp;-&nbsp;" + transportCtrl.transportTimers[0].departures[2] + "&nbsp;-&nbsp;" + transportCtrl.transportTimers[0].departures[3]}}</p></h5>
       <div class="progress">
         <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: {{transportCtrl.getPercentage(0)}}%;"></div>
@@ -17,7 +17,7 @@
         <h5>Mot Alvik ({{transportCtrl.getTimeLeft(2)}})<p style="float:right; font-weight:normal; font-size: 12px">{{transportCtrl.transportTimers[2].departures[1] + "&nbsp;-&nbsp;" + transportCtrl.transportTimers[2].departures[2] + "&nbsp;-&nbsp;" + transportCtrl.transportTimers[2].departures[3]}}</p></h5>        <div class="progress">
           <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: {{transportCtrl.getPercentage(2)}}%;"></div>
         </div>
-        <h5>Mot Alvik ({{transportCtrl.getTimeLeft(3)}})<p style="float:right; font-weight:normal; font-size: 12px">{{transportCtrl.transportTimers[3].departures[1] + "&nbsp;-&nbsp;" + transportCtrl.transportTimers[3].departures[2] + "&nbsp;-&nbsp;" + transportCtrl.transportTimers[3].departures[3]}}</p></h5>       <div class="progress">
+        <h5>Mot Solna ({{transportCtrl.getTimeLeft(3)}})<p style="float:right; font-weight:normal; font-size: 12px">{{transportCtrl.transportTimers[3].departures[1] + "&nbsp;-&nbsp;" + transportCtrl.transportTimers[3].departures[2] + "&nbsp;-&nbsp;" + transportCtrl.transportTimers[3].departures[3]}}</p></h5>       <div class="progress">
           <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: {{transportCtrl.getPercentage(3)}}%;"></div>
         </div>
       <div class="transport">
@@ -27,7 +27,7 @@
         </div>
       <div class="transport">
         <h4 style="text-align:center;">Voltavägen (buss)</h4>
-        <h5>Mot Mörby Centrum ({{transportCtrl.getTimeLeft(5)}})<p style="float:right; font-weight:normal; font-size: 12px">{{transportCtrl.transportTimers[5].departures[1] + "&nbsp;-&nbsp;" + transportCtrl.transportTimers[5].departures[2] + "&nbsp;-&nbsp;" + transportCtrl.transportTimers[5].departures[3]}}</p></h5>       <div class="progress">
+        <h5>Mot Danderyd ({{transportCtrl.getTimeLeft(5)}})<p style="float:right; font-weight:normal; font-size: 12px">{{transportCtrl.transportTimers[5].departures[1] + "&nbsp;-&nbsp;" + transportCtrl.transportTimers[5].departures[2] + "&nbsp;-&nbsp;" + transportCtrl.transportTimers[5].departures[3]}}</p></h5>       <div class="progress">
           <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: {{transportCtrl.getPercentage(5)}}%;"></div>
         </div>
       </div>

@@ -7,14 +7,14 @@
             <i class="wi-big {{weatherCtrl.getWeatherIcon(weatherCtrl.weatherNow.weather[0].id)}}"></i>
             <weather-h1 style="text-align:left;">{{weatherCtrl.getWeekDay(0)}}</weather-h1>
             <weather-h1>{{weatherCtrl.fromKalvinToCelcius(weatherCtrl.weatherNow.main.temp) | number:1}}°C</weather-h1>
-            <div class="weather-windbox">
+            <!--<div class="weather-windbox">
                 <p style="font-weight:bold;">Vind</p>
                 <i class="wi-small wi-strong-wind"></i>
                 <p>{{weatherCtrl.weatherNow.wind.speed}} m/s</p>
-            </div>
+            </div>-->
         </div>
         <div ng-repeat="day in weatherCtrl.weatherWeek.list | limitTo: -6" class="col-lg-2 weather-box-small">
-            <p style="text-align:left;">{{weatherCtrl.getWeekDay($index + 1)}}</p>
+            <p style="text-align:left;">{{weatherCtrl.getWeekDay($index + 1).substring(0,3)}}</p>
             <i class="wi-small {{weatherCtrl.getWeatherIcon(weatherCtrl.weatherWeek.list[$index + 1].weather[0].id)}}"></i>
             {{weatherCtrl.fromKalvinToCelcius(day.temp.day) | number:1}}°C
             <div style="color:black;">{{weatherCtrl.fromKalvinToCelcius(day.temp.night) | number:1}}°C</div>

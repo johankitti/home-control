@@ -29,18 +29,18 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="header" ng-controller="HeaderCtrl as headerCtrl">
-        <h1>Home Control {{headerCtrl.getCurrentTime()}}</h1>
-    </div>
     <div class="container-fluid">
         <div class="col-lg-4">
+            <div ng-include="'partial/timedate.html'"></div>
             <div ng-include="'partial/transport.html'"></div>
         </div>
         <div class="col-lg-4">
-            <div ng-include="'partial/weather.html'"></div>
+          <div ng-include="'partial/weather.html'"></div>
+          <div ng-include="'partial/location.html'"></div>
         </div>
         <div class="col-lg-4">
-            <div ng-include="'partial/schedule.html'"></div>
+          <div ng-include="'partial/schedule.html'"></div>
+          <div ng-include="'partial/instagram.html'"></div>
         </div>
     </div>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -76,11 +76,13 @@
         <script src="js/app.js"></script>
           <!-- injector:js -->
           <script src="js/app.js"></script>
-          <script src="js/controllers/HeaderCtrl.js"></script>
+          <script src="js/controllers/InstagramCtrl.js"></script>
           <script src="js/controllers/ScheduleCtrl.js"></script>
+          <script src="js/controllers/TimeDateCtrl.js"></script>
           <script src="js/controllers/TransportCtrl.js"></script>
           <script src="js/controllers/WeatherCtrl.js"></script>
           <script src="js/filter/timePassedFilter.js"></script>
+          <script src="js/services/instagramService.js"></script>
           <script src="js/services/restService.js"></script>
           <script src="js/services/scheduleService.js"></script>
           <script src="js/services/transportService.js"></script>

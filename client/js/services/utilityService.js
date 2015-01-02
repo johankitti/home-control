@@ -6,7 +6,7 @@
   var utilityService = function($http) {
     this.http = $http;
 
-    this.dates = ['Sön', 'Mån', 'Tis', 'Ons', 'Tor', 'Fre', 'Lör'];
+    this.dates = ['Söndag', 'Måndag', 'Tisdag', 'Onsdag', 'Torsdag', 'Fredag', 'Lördag'];
 
     this.timeFormat = 'HH:mm:ss';
   };
@@ -34,7 +34,8 @@
   };
 
   utilityService.prototype.getCurrentTime = function() {
-    return moment().add(6, 'hours').format(this.timeFormat);
+    //return moment().add(6, 'hours').format(this.timeFormat);
+    return moment().add(1, 'hours').format(this.timeFormat);
   };
 
   homeDashboard.service('utilityService', utilityService);

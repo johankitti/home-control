@@ -9,7 +9,19 @@ var http = require('http');
 
 module.exports = function(app) {
 
-  // Insert routes below
+  // INSTAGRAM API
+  app.get('/api/instagram/:key/:secret/:user', function(req, res) {
+    var ig = require('instagram-node-lib');
+    ig.set('client_id', req.params.key);
+    ig.users.recent({
+      user_id: req.params.user,
+      complete: function(data) {
+        res.send(data);
+      }
+    });
+  });
+
+  // TRANSPORT API
   app.get('/api/transport/:key/:dest/:station/:exclude', function(req, res) {
     var url = '/api2/TravelplannerV2/trip.%3CFORMAT%3E?key=' + req.params.key + '&originId=' + req.params.station +
       '&destId=' + req.params.dest + req.params.exclude;
@@ -19,17 +31,6 @@ module.exports = function(app) {
       host: 'api.sl.se',
       path: url
     };
-
-    //res.send({
-    //  TripList:
-    //    {Trip: [
-    //      {LegList: {Leg: {Origin: {time: '03:40'}}}},
-    //      {LegList: {Leg: {Origin: {time: '03:50'}}}},
-    //      {LegList: {Leg: {Origin: {time: '04:00'}}}},
-    //      {LegList: {Leg: {Origin: {time: '04:10'}}}},
-    //      {LegList: {Leg: {Origin: {time: '04:20'}}}}
-    //    ]}
-    //});
 
     http.request(options, function(response) {
       var str = '';

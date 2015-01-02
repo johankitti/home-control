@@ -7,12 +7,17 @@ body {
 .weather-box {
     width: 100%;
     float:left;
-    margin-bottom: 20px;
+    margin-bottom: -10px;
+    margin-top: -10px;
 }
 .weather-box-small {
     float: left;
     font-size: 20px;
     margin: auto;
+}
+
+h4 {
+  margin-bottom: 20px
 }
 
 .weather-windbox {
@@ -32,10 +37,11 @@ body {
 }
 
 weather-h1 {
-    float: left;
-    font-size: 60px;
-    font-weight: bold;
-    width: 60%;
+  float: left;
+  font-size: 50px;
+  font-weight: bold;
+  width: 60%;
+  margin-left: 20px;
 }
 
 /* SCHEDULE */
@@ -49,7 +55,7 @@ weather-h1 {
     background-color: rgba(255,255,255, 0.6);
     color: black;
     margin-bottom: 10px;
-    padding: 5px;
+    padding: 2px;
 }
 
 /* NÅT ANNAT */
@@ -64,21 +70,22 @@ weather-h1 {
 
 .container-fluid {
     background-image: url('../assets/images/bg.jpg');
-    min-height: 100%;
+    min-height: 1200px;
     color: white;
 }
 
 .rubrik {
     float: left;
 }
+
 .col-lg-4 {
     float: left;
+    margin-bottom: -35px;
 }
 
 .col-lg-12, .col-lg-6 {
     background-color:rgba(0,0,0,0.2);
     padding: 15px !important;
-    margin-bottom:20px;
 }
 
 .col-lg-6 {
