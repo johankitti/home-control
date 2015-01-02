@@ -5,26 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be91cb58-604b-44d6-ac83-5b3765ff0ba8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/js/controllers/InstagramCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/partial/instagram.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/js/services/instagramService.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/partial/location.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/partial/timedate.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/js/controllers/HeaderCtrl.js" afterPath="$PROJECT_DIR$/client/js/controllers/TimeDateCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/js/controllers/ScheduleCtrl.js" afterPath="$PROJECT_DIR$/client/js/controllers/ScheduleCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/js/controllers/TransportCtrl.js" afterPath="$PROJECT_DIR$/client/js/controllers/TransportCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/css/app.css" afterPath="$PROJECT_DIR$/client/css/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/app.js" afterPath="$PROJECT_DIR$/server/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/index.html" afterPath="$PROJECT_DIR$/client/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/js/services/restService.js" afterPath="$PROJECT_DIR$/client/js/services/restService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/routes.js" afterPath="$PROJECT_DIR$/server/routes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/partial/schedule.html" afterPath="$PROJECT_DIR$/client/partial/schedule.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/partial/transport.html" afterPath="$PROJECT_DIR$/client/partial/transport.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/js/services/transportService.js" afterPath="$PROJECT_DIR$/client/js/services/transportService.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/js/services/utilityService.js" afterPath="$PROJECT_DIR$/client/js/services/utilityService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/partial/weather.html" afterPath="$PROJECT_DIR$/client/partial/weather.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="homeDashboardApp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -91,11 +72,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="utilityService.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="utilityService.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/js/services/utilityService.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="735">
-              <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.6958763" vertical-offset="0" max-vertical-offset="776">
+              <caret line="36" column="37" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -131,13 +112,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="timedate.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="timedate.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/partial/timedate.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.099734046" vertical-offset="0" max-vertical-offset="752">
-              <caret line="5" column="63" selection-start-line="5" selection-start-column="63" selection-end-line="5" selection-end-column="63" />
+            <state vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="225">
+              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h1#0;n#div#1;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -186,11 +168,11 @@
         <option value="$PROJECT_DIR$/client/partial/transport.html" />
         <option value="$PROJECT_DIR$/client/js/services/transportService.js" />
         <option value="$PROJECT_DIR$/client/js/controllers/TransportCtrl.js" />
-        <option value="$PROJECT_DIR$/client/js/services/utilityService.js" />
         <option value="$PROJECT_DIR$/client/partial/instagram.html" />
         <option value="$PROJECT_DIR$/client/partial/location.html" />
         <option value="$PROJECT_DIR$/client/css/app.css" />
         <option value="$PROJECT_DIR$/client/partial/timedate.html" />
+        <option value="$PROJECT_DIR$/client/js/services/utilityService.js" />
       </list>
     </option>
   </component>
@@ -719,12 +701,12 @@
       <workItem from="1418518236181" duration="1438000" />
       <workItem from="1418579965395" duration="7240000" />
       <workItem from="1419360411804" duration="11840000" />
-      <workItem from="1420148396692" duration="1067000" />
+      <workItem from="1420148396692" duration="1078000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60385000" />
+    <option name="totallyTimeSpent" value="60396000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="6" />
@@ -1130,14 +1112,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/js/services/utilityService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="735">
-          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/partial/instagram.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="210">
@@ -1164,11 +1138,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/partial/timedate.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.099734046" vertical-offset="0" max-vertical-offset="752">
-          <caret line="5" column="63" selection-start-line="5" selection-start-column="63" selection-end-line="5" selection-end-column="63" />
+        <state vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="225">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h1#0;n#div#1;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/js/services/utilityService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6958763" vertical-offset="0" max-vertical-offset="776">
+          <caret line="36" column="37" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -35,7 +35,7 @@
 
   utilityService.prototype.getCurrentTime = function() {
     //return moment().add(6, 'hours').format(this.timeFormat);
-    return moment().add(1, 'hours').format(this.timeFormat);
+    return moment().format(this.timeFormat);
   };
 
   homeDashboard.service('utilityService', utilityService);
