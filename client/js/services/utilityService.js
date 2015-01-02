@@ -11,16 +11,20 @@
     this.timeFormat = 'HH:mm:ss';
   };
   utilityService.prototype.fromKalvinToCelcius = function(kalvin) {
-      return (kalvin - 273.15);
+    return (kalvin - 273.15);
   };
 
   utilityService.prototype.getWeekDay = function(day) {
-      var d = new Date();
-      return this.dates[(d.getDay() + day) % 7];
+    var d = new Date();
+    return this.dates[(d.getDay() + day) % 7];
   };
 
   utilityService.prototype.getDate = function() {
-      return new Date();
+    return new Date();
+  };
+
+  utilityService.prototype.getFormatedDate = function() {
+    return moment().lang('sv').format('dddd, Do MMMM YYYY');
   };
 
   utilityService.prototype.getTimeDifferenceSeconds = function(firstTime, secondTime) {

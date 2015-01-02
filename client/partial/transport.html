@@ -5,29 +5,29 @@
   <div class="col-lg-12">
     <div class="transport">
       <h4 style="text-align:center;">Solna Strand (tunnelbana)</h4>
-      <h5>Mot T-centralen ({{transportCtrl.getTimeLeft(0)}})<p style="float:right; font-weight:normal; font-size: 12px">{{transportCtrl.transportTimers[0].departures[1] + "&nbsp;-&nbsp;" + transportCtrl.transportTimers[0].departures[2] + "&nbsp;-&nbsp;" + transportCtrl.transportTimers[0].departures[3]}}</p></h5>
+      <h5>Mot T-centralen <span ng-show="transportCtrl.transportTimers[0].departures.length > 1">({{transportCtrl.getTimeLeft(0)}})</span><p style="float:right; font-weight:normal; font-size: 12px">{{transportCtrl.transportTimers[0].departures[1] + "&nbsp;-&nbsp;" + transportCtrl.transportTimers[0].departures[2] + "&nbsp;-&nbsp;" + transportCtrl.transportTimers[0].departures[3]}}</p></h5>
       <div class="progress">
         <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: {{transportCtrl.getPercentage(0)}}%;"></div>
       </div>
-      <h5>Mot Hjulsta ({{transportCtrl.getTimeLeft(1)}})<p style="float:right; font-weight:normal; font-size: 12px">{{transportCtrl.transportTimers[1].departures[1] + "&nbsp;-&nbsp;" + transportCtrl.transportTimers[1].departures[2] + "&nbsp;-&nbsp;" + transportCtrl.transportTimers[1].departures[3]}}</p></h5>     <div class="progress">
+      <h5>Mot Hjulsta <span ng-show="transportCtrl.transportTimers[1].departures.length > 1">({{transportCtrl.getTimeLeft(1)}})</span><p style="float:right; font-weight:normal; font-size: 12px">{{transportCtrl.transportTimers[1].departures[1] + "&nbsp;-&nbsp;" + transportCtrl.transportTimers[1].departures[2] + "&nbsp;-&nbsp;" + transportCtrl.transportTimers[1].departures[3]}}</p></h5>     <div class="progress">
         <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: {{transportCtrl.getPercentage(1)}}%;"></div>
       </div>
       <div class="transport">
         <h4 style="text-align:center;">Johannesfred (tvärbana)</h4>
-        <h5>Mot Alvik ({{transportCtrl.getTimeLeft(2)}})<p style="float:right; font-weight:normal; font-size: 12px">{{transportCtrl.transportTimers[2].departures[1] + "&nbsp;-&nbsp;" + transportCtrl.transportTimers[2].departures[2] + "&nbsp;-&nbsp;" + transportCtrl.transportTimers[2].departures[3]}}</p></h5>        <div class="progress">
+        <h5>Mot Alvik <span ng-show="transportCtrl.transportTimers[2].departures.length > 1">({{transportCtrl.getTimeLeft(2)}})</span><p style="float:right; font-weight:normal; font-size: 12px">{{transportCtrl.transportTimers[2].departures[1] + "&nbsp;-&nbsp;" + transportCtrl.transportTimers[2].departures[2] + "&nbsp;-&nbsp;" + transportCtrl.transportTimers[2].departures[3]}}</p></h5>        <div class="progress">
           <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: {{transportCtrl.getPercentage(2)}}%;"></div>
         </div>
-        <h5>Mot Solna ({{transportCtrl.getTimeLeft(3)}})<p style="float:right; font-weight:normal; font-size: 12px">{{transportCtrl.transportTimers[3].departures[1] + "&nbsp;-&nbsp;" + transportCtrl.transportTimers[3].departures[2] + "&nbsp;-&nbsp;" + transportCtrl.transportTimers[3].departures[3]}}</p></h5>       <div class="progress">
+        <h5>Mot Solna <span ng-show="transportCtrl.transportTimers[3].departures.length > 1">({{transportCtrl.getTimeLeft(3)}})</span><p style="float:right; font-weight:normal; font-size: 12px">{{transportCtrl.transportTimers[3].departures[1] + "&nbsp;-&nbsp;" + transportCtrl.transportTimers[3].departures[2] + "&nbsp;-&nbsp;" + transportCtrl.transportTimers[3].departures[3]}}</p></h5>       <div class="progress">
           <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: {{transportCtrl.getPercentage(3)}}%;"></div>
         </div>
       <div class="transport">
         <h4 style="text-align:center;">Johannesfred (buss)</h4>
-        <h5>Mot Alvik ({{transportCtrl.getTimeLeft(4)}})<p style="float:right; font-weight:normal; font-size: 12px">{{transportCtrl.transportTimers[4].departures[1] + "&nbsp;-&nbsp;" + transportCtrl.transportTimers[4].departures[2] + "&nbsp;-&nbsp;" + transportCtrl.transportTimers[4].departures[3]}}</p></h5>        <div class="progress">
+        <h5>Mot Alvik <span ng-show="transportCtrl.transportTimers[4].departures.length > 1">({{transportCtrl.getTimeLeft(4)}})</span><p style="float:right; font-weight:normal; font-size: 12px">{{transportCtrl.transportTimers[4].departures[1] + "&nbsp;-&nbsp;" + transportCtrl.transportTimers[4].departures[2] + "&nbsp;-&nbsp;" + transportCtrl.transportTimers[4].departures[3]}}</p></h5>        <div class="progress">
           <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: {{transportCtrl.getPercentage(4)}}%;"></div>
         </div>
       <div class="transport">
         <h4 style="text-align:center;">Voltavägen (buss)</h4>
-        <h5>Mot Danderyd ({{transportCtrl.getTimeLeft(5)}})<p style="float:right; font-weight:normal; font-size: 12px">{{transportCtrl.transportTimers[5].departures[1] + "&nbsp;-&nbsp;" + transportCtrl.transportTimers[5].departures[2] + "&nbsp;-&nbsp;" + transportCtrl.transportTimers[5].departures[3]}}</p></h5>       <div class="progress">
+        <h5>Mot Danderyd <span ng-show="transportCtrl.transportTimers[5].departures.length > 1">({{transportCtrl.getTimeLeft(5)}})</span><p style="float:right; font-weight:normal; font-size: 12px">{{transportCtrl.transportTimers[5].departures[1] + "&nbsp;-&nbsp;" + transportCtrl.transportTimers[5].departures[2] + "&nbsp;-&nbsp;" + transportCtrl.transportTimers[5].departures[3]}}</p></h5>       <div class="progress">
           <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: {{transportCtrl.getPercentage(5)}}%;"></div>
         </div>
       </div>

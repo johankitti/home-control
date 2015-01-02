@@ -14,5 +14,9 @@
     return this.utilityService.getWeekDay(day);
   };
 
+  TimeDateCtrl.prototype.getFormatedDate = function() {
+    return this.utilityService.getFormatedDate();
+  };
+
   homeDashboard.controller('TimeDateCtrl', TimeDateCtrl);
 }());
