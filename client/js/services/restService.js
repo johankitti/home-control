@@ -58,8 +58,9 @@
   restService.prototype.loadInstagram = function() {
     var key = '0fed51a221ae4a1c9826124c163280ef';
     var secret = 'e4f83bd883db42799f4e7d52223e68da';
-    var user = '230618476';
-    //var user = '3691904'; // VICKAN USER ID
+    //var user = '230618476'; //JOHAN
+    var user = '12884878'; //BUNNY MAMA
+    //var user = '3691904'; //VICKAN
     return this.http.get('/api/instagram/' + key + '/' + secret + '/' + user);
   };
 

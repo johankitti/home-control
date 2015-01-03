@@ -1,0 +1,12 @@
+<div ng-controller="TimeLeftCtrl as timeLeftCtrl">
+  <div class="rubrik">
+    <h1>Dagar kvar</h1><p>{{timeLeftCtrl.title}}</p>
+  </div>
+  <div class="col-lg-12" style="height:105px">
+    <h2 style="margin-top:0px !important;">{{timeLeftCtrl.getDaysPassed() + "/" + timeLeftCtrl.getDaysBetween()}}</h2>
+    <div class="progress">
+      <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: {{timeLeftCtrl.getPercentageLeft()}}%">
+      </div>
+    </div>
+  </div>
+</div>

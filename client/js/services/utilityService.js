@@ -38,8 +38,18 @@
   };
 
   utilityService.prototype.getCurrentTime = function() {
-    //return moment().add(6, 'hours').format(this.timeFormat);
     return moment().format(this.timeFormat);
+  };
+
+  utilityService.prototype.getDaysBetween = function(startDate, endDate) {
+    var a = moment([endDate.substring(0,4), endDate.substring(4,6), endDate.substring(6)]);
+    var b = moment([startDate.substring(0,4), startDate.substring(4,6), startDate.substring(6)]);
+    return Math.abs(b.diff(a, 'days'));
+  };
+
+  utilityService.prototype.getDaysFrom = function(fromDate) {
+    var nowDate = moment().format('YYYYMMDD');
+    return this.getDaysBetween(nowDate, fromDate);
   };
 
   homeDashboard.service('utilityService', utilityService);
