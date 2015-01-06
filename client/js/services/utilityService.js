@@ -24,7 +24,7 @@
   };
 
   utilityService.prototype.getFormatedDate = function() {
-    return moment().lang('fr').format('dddd, Do MMMM YYYY');
+    return moment().lang('sv').format('dddd, Do MMMM YYYY');
   };
 
   utilityService.prototype.getTimeDifferenceSeconds = function(firstTime, secondTime) {

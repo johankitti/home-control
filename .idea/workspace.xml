@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be91cb58-604b-44d6-ac83-5b3765ff0ba8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/js/controllers/InstagramCtrl.js" afterPath="$PROJECT_DIR$/client/js/controllers/InstagramCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/partial/schedule.html" afterPath="$PROJECT_DIR$/client/partial/schedule.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/index.html" afterPath="$PROJECT_DIR$/client/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/js/services/utilityService.js" afterPath="$PROJECT_DIR$/client/js/services/utilityService.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -33,11 +32,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="utilityService.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="utilityService.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/js/services/utilityService.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="109" max-vertical-offset="945">
-              <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.4007732" vertical-offset="64" max-vertical-offset="945">
+              <caret line="25" column="57" selection-start-line="25" selection-start-column="57" selection-end-line="25" selection-end-column="57" />
               <folding />
             </state>
           </provider>
@@ -63,10 +62,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InstagramCtrl.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="InstagramCtrl.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/js/controllers/InstagramCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.043814432" vertical-offset="454" max-vertical-offset="1230">
+            <state vertical-scroll-proportion="0.0" vertical-offset="199" max-vertical-offset="1230">
               <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
               <folding />
             </state>
@@ -135,8 +134,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.25" vertical-offset="90" max-vertical-offset="1545">
-              <caret line="32" column="30" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
+            <state vertical-scroll-proportion="-12.5" vertical-offset="705" max-vertical-offset="1560">
+              <caret line="67" column="61" selection-start-line="67" selection-start-column="61" selection-end-line="67" selection-end-column="61" />
               <folding />
             </state>
           </provider>
@@ -173,15 +172,15 @@
         <option value="$PROJECT_DIR$/client/css/app.css" />
         <option value="$PROJECT_DIR$/client/partial/timedate.html" />
         <option value="$PROJECT_DIR$/client/bower_components/moment/moment.js" />
-        <option value="$PROJECT_DIR$/client/index.html" />
         <option value="$PROJECT_DIR$/client/js/services/timeLeftService.js" />
         <option value="$PROJECT_DIR$/client/partial/timeleft.html" />
         <option value="$PROJECT_DIR$/client/js/controllers/TimeLeftCtrl.js" />
         <option value="$PROJECT_DIR$/client/js/services/restService.js" />
         <option value="$PROJECT_DIR$/client/partial/location.html" />
-        <option value="$PROJECT_DIR$/client/js/services/utilityService.js" />
         <option value="$PROJECT_DIR$/client/partial/schedule.html" />
         <option value="$PROJECT_DIR$/client/js/controllers/InstagramCtrl.js" />
+        <option value="$PROJECT_DIR$/client/index.html" />
+        <option value="$PROJECT_DIR$/client/js/services/utilityService.js" />
       </list>
     </option>
   </component>
@@ -755,12 +754,12 @@
       <workItem from="1419360411804" duration="11840000" />
       <workItem from="1420148396692" duration="11397000" />
       <workItem from="1420494760921" duration="106000" />
-      <workItem from="1420509696324" duration="553000" />
+      <workItem from="1420509696324" duration="1022000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71374000" />
+    <option name="totallyTimeSpent" value="71843000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="6" />
@@ -1149,14 +1148,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.25" vertical-offset="90" max-vertical-offset="1545">
-          <caret line="32" column="30" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/partial/timedate.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="210">
@@ -1172,14 +1163,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
           <caret line="17" column="49" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/js/services/utilityService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="109" max-vertical-offset="945">
-          <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
           <folding />
         </state>
       </provider>
@@ -1202,8 +1185,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/js/controllers/InstagramCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.043814432" vertical-offset="454" max-vertical-offset="1230">
+        <state vertical-scroll-proportion="0.0" vertical-offset="199" max-vertical-offset="1230">
           <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.5" vertical-offset="705" max-vertical-offset="1560">
+          <caret line="67" column="61" selection-start-line="67" selection-start-column="61" selection-end-line="67" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/js/services/utilityService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4007732" vertical-offset="64" max-vertical-offset="945">
+          <caret line="25" column="57" selection-start-line="25" selection-start-column="57" selection-end-line="25" selection-end-column="57" />
           <folding />
         </state>
       </provider>
