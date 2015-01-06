@@ -23,12 +23,12 @@
     WeatherCtrl.prototype.getWeather = function() {
         this.weatherService.loadWeatherNow(function() {
             this.weatherNow = this.weatherService.getWeatherNow();
-            window.console.log(this.weatherNow);
+           //window.console.log(this.weatherNow);
         }.bind(this));
 
         this.weatherService.loadWeatherWeek(function() {
             this.weatherWeek = this.weatherService.getWeatherWeek();
-            window.console.log(this.weatherWeek);
+            //window.console.log(this.weatherWeek);
         }.bind(this));
     };
 

@@ -13,13 +13,8 @@
 
     this.instagram = [
       {
-        images: {
-          standard_resolution: {
-            url: 'tjena'
-          }},
-        user: {
-          username: 'fruktprins'
-        }
+        images: {standard_resolution: {url: ''}},
+        user: {username: ''}
       }
     ];
 
@@ -54,7 +49,6 @@
       return "";
     }
   };
-
 
   InstagramCtrl.prototype.update = function() {
     this.timeout(function () {

@@ -19,7 +19,7 @@
 
   ScheduleCtrl.prototype.getSchedule = function() {
     for (var i = 0; i < this.schedules.length; i++) {
-      console.log(this.schedules[i]);
+      //window.console.log(this.schedules[i]);
       this.scheduleService.loadSchedule(this.schedules[i].email, function(i) {
         this.schedules[i].scheduleData = this.scheduleService.getSchedule();
       }.bind(this, i));
