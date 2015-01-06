@@ -33,7 +33,7 @@
   InstagramCtrl.prototype.getInstagram = function() {
     this.instagramService.loadInstagram(function() {
       this.instagram = this.instagramService.getInstagram();
-      window.console.log(this.instagram);
+      //window.console.log(this.instagram);
     }.bind(this));
   };
 
@@ -67,7 +67,7 @@
     this.timeout(function () {
       this.currentImg += 1;
       this.currentImg = this.currentImg % 20;
-      console.log(this.currentImg);
+      //window.console.log(this.currentImg);
       this.updateImg();
     }.bind(this), 1000 * this.instagramUpdateImgFrequency);
   };
