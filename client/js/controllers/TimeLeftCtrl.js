@@ -6,7 +6,7 @@
     this.timeLeftService = timeLeftService;
 
     this.title = '...tills Johans utbytesstudier är slut';
-    this.startDate = '20150101';
+    this.startDate = '20150104';
     this.endDate = '20150602';
   };
 

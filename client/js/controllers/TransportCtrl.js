@@ -9,7 +9,7 @@
     this.transportService = transportService;
     this.utilityService = utilityService;
 
-    this.transportationUpdateFrequency = 5; //minutes
+    this.transportationUpdateFrequency = 15; //minutes
     this.barUpdateFrequency = 1; //sekunder
 
     this.timeFormat = 'HH:mm:ss';

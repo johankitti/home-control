@@ -23,7 +23,7 @@ module.exports = function(app) {
 
   // TRANSPORT API
   app.get('/api/transport/:key/:dest/:station/:exclude', function(req, res) {
-    var url = '/api2/TravelplannerV2/trip.%3CFORMAT%3E?key=' + req.params.key + '&originId=' + req.params.station +
+    var url = '/api2/TravelplannerV2/trip.json?key=' + req.params.key + '&originId=' + req.params.station +
       '&destId=' + req.params.dest + req.params.exclude;
 
     console.log(url);
