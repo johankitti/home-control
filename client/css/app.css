@@ -98,3 +98,17 @@ weather-h1 {
 .col-lg-2 {
     text-align: center;
 }
+
+.lampImages {
+  position: relative;
+}
+
+.lampImage {
+  width: 100%;
+  position: absolute;
+}
+
+.lampText {
+  margin-left: 250px;
+  margin-top: 20px;
+}
