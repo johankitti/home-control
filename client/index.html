@@ -37,7 +37,7 @@
         </div>
         <div class="col-lg-4">
           <div ng-include="'partial/weather.html'"></div>
-          <div ng-include="'partial/location.html'"></div>
+          <div ng-include="'partial/lighting.html'"></div>
         </div>
         <div class="col-lg-4">
           <div ng-include="'partial/schedule.html'"></div>
@@ -73,11 +73,10 @@
       <!-- endbower -->
     <!-- endbuild -->
 
-        <!-- build:js({.tmp,client}) app/app.js -->
-        <script src="js/app.js"></script>
           <!-- injector:js -->
           <script src="js/app.js"></script>
           <script src="js/controllers/InstagramCtrl.js"></script>
+          <script src="js/controllers/LightingCtrl.js"></script>
           <script src="js/controllers/ScheduleCtrl.js"></script>
           <script src="js/controllers/TimeDateCtrl.js"></script>
           <script src="js/controllers/TimeLeftCtrl.js"></script>
@@ -85,6 +84,7 @@
           <script src="js/controllers/WeatherCtrl.js"></script>
           <script src="js/filter/timePassedFilter.js"></script>
           <script src="js/services/instagramService.js"></script>
+          <script src="js/services/lightingService.js"></script>
           <script src="js/services/restService.js"></script>
           <script src="js/services/scheduleService.js"></script>
           <script src="js/services/timeLeftService.js"></script>

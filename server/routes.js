@@ -52,8 +52,12 @@ module.exports = function(app) {
    .get(errors[404]);
 
   // All other routes should redirect to the index.html
-  app.route('/*')
+  app.route('/')
     .get(function(req, res) {
       res.sendfile(app.get('appPath') + '/index.html');
   });
+  app.route('/lighting')
+    .get(function(req, res) {
+      res.sendfile(app.get('appPath') + '/lighting-control.html');
+    });
 };
