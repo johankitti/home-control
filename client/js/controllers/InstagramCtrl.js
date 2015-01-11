@@ -9,7 +9,7 @@
     this.utilityService = utilityService;
 
     this.instagramUpdateFrequency = 60; //minutes
-    this.instagramUpdateImgFrequency = 20; //Sekunder
+    this.instagramUpdateImgFrequency = 10; //Sekunder
 
     this.instagram = [
       {
