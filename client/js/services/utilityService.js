@@ -9,6 +9,8 @@
     this.dates = ['Söndag', 'Måndag', 'Tisdag', 'Onsdag', 'Torsdag', 'Fredag', 'Lördag'];
 
     this.timeFormat = 'HH:mm:ss';
+
+    this.debug = true;
   };
   utilityService.prototype.fromKalvinToCelcius = function(kalvin) {
     return (kalvin - 273.15);
@@ -38,7 +40,13 @@
   };
 
   utilityService.prototype.getCurrentTime = function() {
-    return moment().format(this.timeFormat);
+
+    if (this.debug) {
+      return moment().add(6, 'hours').format(this.timeFormat);
+    }
+    else {
+      return moment().format(this.timeFormat);
+    }
   };
 
   utilityService.prototype.getDaysBetween = function(startDate, endDate) {

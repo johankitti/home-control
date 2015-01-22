@@ -11,7 +11,7 @@
     transportService.prototype.loadTransportInfo = function(dest, station, type, callback) {
         this.restService.loadTransportInfo(dest, station, type)
             .success(function(data) {
-                //window.console.log(data);
+                window.console.log(data);
                 this.transportInfo = data.TripList;
                 callback();
             }.bind(this))
