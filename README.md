@@ -26,8 +26,8 @@ exit 0
 Make the file executable and register it to autostart with:
 
 ```
-sudo chmod 755 node-autostart.sh
-sudo update-rc.d node-autostart.sh defaults
+$ sudo chmod 755 node-autostart.sh
+$ sudo update-rc.d node-autostart.sh defaults
 ```
 
 /etc/xdg/lxsession/LXDE-pi/autostart - to autostart Chromium add the following lines (needs unclutter app installed. sudo apt-get install unclutter):
