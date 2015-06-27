@@ -1,5 +1,5 @@
 {
-  "name": "home-dashboard-app",
+  "name": "home-control-app",
   "version": "0.0.0",
   "main": "app.js",
   "dependencies": {
