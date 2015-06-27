@@ -42,7 +42,7 @@
   utilityService.prototype.getCurrentTime = function() {
 
     if (this.debug) {
-      return moment().add(6, 'hours').format(this.timeFormat);
+      return moment().format(this.timeFormat);
     }
     else {
       return moment().format(this.timeFormat);

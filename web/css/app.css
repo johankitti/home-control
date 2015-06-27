@@ -65,7 +65,7 @@ weather-h1 {
 }
 
 .container-fluid {
-    background-image: url('../assets/images/bg.jpg');
+    background-image: url('/assets/images/bg.jpg');
     min-height: 1200px;
     color: white;
 }

@@ -14,7 +14,6 @@
     <!-- build:css(client) app/vendor.css -->
       <!-- bower:css -->
       <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-      <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
       <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css({.tmp,client}) app/app.css -->
@@ -31,17 +30,17 @@
     <!-- Add your site or application content here -->
     <div class="container-fluid">
         <div class="col-lg-4">
-          <div ng-include="'partial/timedate.html'"></div>
-          <div ng-include="'partial/timeleft.html'"></div>
-          <div ng-include="'partial/transport.html'"></div>
+          <div ng-include="'html/timedate.html'"></div>
+          <div ng-include="'html/timeleft.html'"></div>
+          <div ng-include="'html/transport.html'"></div>
         </div>
         <div class="col-lg-4">
-          <div ng-include="'partial/weather.html'"></div>
-          <div ng-include="'partial/lighting.html'"></div>
+          <div ng-include="'html/weather.html'"></div>
+          <div ng-include="'html/lighting.html'"></div>
         </div>
         <div class="col-lg-4">
-          <div ng-include="'partial/schedule.html'"></div>
-          <div ng-include="'partial/instagram.html'"></div>
+          <div ng-include="'html/schedule.html'"></div>
+          <div ng-include="'html/instagram.html'"></div>
         </div>
     </div>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -62,12 +61,7 @@
 
     <!-- build:js(client) app/vendor.js -->
       <!-- bower:js -->
-      <script src="bower_components/jquery/dist/jquery.js"></script>
       <script src="bower_components/angular/angular.js"></script>
-      <script src="bower_components/angular-resource/angular-resource.js"></script>
-      <script src="bower_components/angular-cookies/angular-cookies.js"></script>
-      <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-      <script src="bower_components/lodash/dist/lodash.compat.js"></script>
       <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
       <script src="bower_components/moment/moment.js"></script>
       <!-- endbower -->

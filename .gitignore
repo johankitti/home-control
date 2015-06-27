@@ -1,6 +1,8 @@
 node_modules
 public
 .tmp
-.sass-cache
-client/bower_components
+.idea
+web/bower_components
 dist
+/server/config/local.env.js
+.DS_Store

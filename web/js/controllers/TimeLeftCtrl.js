@@ -5,9 +5,9 @@
   var TimeLeftCtrl = function(timeLeftService) {
     this.timeLeftService = timeLeftService;
 
-    this.title = '...tills Johans utbytesstudier är slut';
-    this.startDate = '20150104';
-    this.endDate = '20150602';
+    this.title = '...tills Vickans semester.';
+    this.startDate = '20150624';
+    this.endDate = '20150717';
   };
 
   TimeLeftCtrl.prototype.getDaysPassed = function() {
