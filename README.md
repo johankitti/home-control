@@ -4,7 +4,7 @@ A dashboard for your home.
 
 Raspberry Pi
 ============
-/etc/init.d/node-autostart.sh - to autostart node server add the following line:
+/etc/init.d/node-autostart.sh - to autostart node server create the following file:
 
 ```
 #! /bin/sh
@@ -21,13 +21,21 @@ Raspberry Pi
 /usr/local/bin/node /home/pi/Desktop/2014/home-control/app.js 8080
 node /home/pi/Desktop/2014/home-control/app.js 8080
 exit 0
-
 ```
 
-/etc/xdg/lxsession/LXDE-pi/autostart - to autostart Chromium add the following line:
-@/usr/bin/chromium --kiosk --start-maximized localhost:8080
-@unclutter (needs unclutter app installed. sudo apt-get install unclutter)
+Make the file executable and register it to autostart with:
 
+```
+sudo chmod 755 node-autostart.sh
+sudo update-rc.d node-autostart.sh defaults
+```
+
+/etc/xdg/lxsession/LXDE-pi/autostart - to autostart Chromium add the following lines (needs unclutter app installed. sudo apt-get install unclutter):
+
+```
+@/usr/bin/chromium --kiosk --start-maximized localhost:8080
+@unclutter
+```
 
 
 Modules
