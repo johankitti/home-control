@@ -6,7 +6,7 @@ Raspberry Pi
 ============
 /etc/init.d/node-autostart.sh - to autostart node server add the following line:
 
-------------
+```
 #! /bin/sh
 # /etc/init.d/node-autostart
 
@@ -22,7 +22,7 @@ Raspberry Pi
 node /home/pi/Desktop/2014/home-control/app.js 8080
 exit 0
 
-------------
+```
 
 /etc/xdg/lxsession/LXDE-pi/autostart - to autostart Chromium add the following line:
 @/usr/bin/chromium --kiosk --start-maximized localhost:8080
