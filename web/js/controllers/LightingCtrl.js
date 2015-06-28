@@ -2,16 +2,21 @@
 
 (function() {
   'use strict';
-  var LightingCtrl = function(lightingService) {
+  var LightingCtrl = function(lightingService, socketService) {
     this.lightingService = lightingService;
+    this.socketService = socketService;
   };
 
-  LightingCtrl.prototype.getLampStatus = function() {
-    return this.lightingService.getLampStatus();
+  LightingCtrl.prototype.updateLightingStatus = function() {
+    this.lightingService.updateLightingStatus();
   };
 
-  LightingCtrl.prototype.setLampOn = function(index, onOff) {
-    this.lightingService.setLampOn(index, onOff);
+  LightingCtrl.prototype.getLamp = function(index) {
+    return this.lightingService.getLamp(index);
+  };
+
+  LightingCtrl.prototype.setLampOnOff = function(index) {
+    this.lightingService.setLampOnOff(index);
   };
 
   homeDashboard.controller('LightingCtrl', LightingCtrl);

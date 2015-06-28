@@ -10,6 +10,24 @@
     this.longitude = 17.975396;
   };
 
+  //LIGHTING REST SERVICES
+
+  restService.prototype.loadLightingInfo = function() {
+    return this.http.get('/api/lighting/');
+  };
+
+  restService.prototype.updateLightingStatus = function(lamps, callback) {
+    this.http.post('/api/lighting/', {lamps: lamps}).
+    error(function(data, status, headers, config) {
+      console.log('Couldn\'t update lighting.');
+      callback(false);
+    }).
+    success(function(data, status, headers, config) {
+      console.log('Lighting successfully updated.');
+      callback(true);
+    });
+  };
+
   //WEATHER REST SERVICES
 
   restService.prototype.loadWeatherWeek = function() {

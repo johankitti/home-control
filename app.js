@@ -2,6 +2,8 @@
 
 var express = require('express');
 var http = require('http');
+var bodyParser = require('body-parser');
+var socket = require('socket.io');
 
 // Setup server
 var app = express();
@@ -12,6 +14,9 @@ app.use("/html", express.static(__dirname + "/web/html"));
 app.use("/assets", express.static(__dirname + "/web/assets"));
 app.use("/bower_components", express.static(__dirname + "/web/bower_components"));
 
+app.use(bodyParser.json()); // for parsing application/json
+app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
+
 var WORKERS = process.env.WEB_CONCURRENCY || 1;
 
 var server = app.listen(process.env.PORT || 8080, function () {
@@ -19,6 +24,8 @@ var server = app.listen(process.env.PORT || 8080, function () {
 	var port = server.address().port;
 	console.log('Home-Control app is listening at http://%s:%s', host, port);
 });
+
+var io = socket.listen(server);
 
 // STATIC CONTENT
 app.all("/", function(req, res, next) {
@@ -29,6 +36,29 @@ app.all("/", function(req, res, next) {
 app.get('/tjena', function(req, res){
 	res.status(200);
   res.send('hello world');
+});
+
+// LIGHTING API
+var lamps = [
+	{name: 'Hallen', on: false},
+	{name: 'Vardagsrum (Slinga)', on: false},
+	{name: 'Vardagsrum (Golv)', on: false},
+	{name: 'Vardagsrum (Fönster)', on: true},
+	{name: 'Kök (Fönster)', on: false},
+	{name: 'Kök (Matbord)', on: false},
+	{name: 'Sovrum', on: false}
+];
+
+app.get('/api/lighting', function(req, res) {
+	res.send(lamps);
+});
+
+app.post('/api/lighting/', function(req, res) {
+	console.log('Updating lighting status:', req.body.lamps);
+	lamps = req.body.lamps;
+	io.emit('lightingChange', lamps);
+	res.status(200);
+	res.send();
 });
 
 // INSTAGRAM API
