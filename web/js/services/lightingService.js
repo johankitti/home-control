@@ -6,12 +6,7 @@
     this.restService = restService;
     this.socketService = socketService;
 
-    this.socketService.on('lightingChange', function(lamps) {
-        console.log('there was a change in ligting!');
-        this.data.lamps = lamps;
-    }.bind(this));
-
-    this.data = {lamps: []};
+    this.lamps = [];
     this.init();
   };
 
@@ -19,21 +14,15 @@
     this.loadLightingInfo();
   };
 
-  lightingService.prototype.updateLightingStatus = function() {
-    //console.log(this.lamps);
-    if (this.restService.updateLightingStatus(this.data.lamps, function(success) {
-      if (success) {
-
-      }
-    }));
+  lightingService.prototype.updateLightingStatus = function(index) {
+    this.restService.updateLightingStatus(this.lamps[index]);
   };
 
   lightingService.prototype.loadLightingInfo = function() {
-    this.data.lamps = this.restService.loadLightingInfo();
+    this.lamps = this.restService.loadLightingInfo();
     this.restService.loadLightingInfo()
         .success(function(data) {
-            window.console.log(data);
-            this.data.lamps = data
+            this.lamps = data
         }.bind(this))
         .error(function(){
           window.console.log('Couldn\'t load lighting info.');
@@ -41,17 +30,17 @@
   };
 
   lightingService.prototype.getLamp = function(index) {
-    return this.data.lamps[index];
+    return this.lamps[index];
   };
 
   lightingService.prototype.setLampOnOff = function(index) {
-    console.log(this.data.lamps[index]);
-    if (this.data.lamps[index].on == true) {
-      this.data.lamps[index].on = false;
+    //console.log(this.lamps[index]);
+    if (this.lamps[index].on == true) {
+      this.lamps[index].on = false;
     } else {
-      this.data.lamps[index].on = true;
+      this.lamps[index].on = true;
     }
-    console.log(this.data.lamps[index]);
+    this.updateLightingStatus(index);
   };
 
   homeDashboard.service('lightingService', lightingService);

@@ -54,9 +54,16 @@ app.get('/api/lighting', function(req, res) {
 });
 
 app.post('/api/lighting/', function(req, res) {
-	console.log('Updating lighting status:', req.body.lamps);
-	lamps = req.body.lamps;
-	io.emit('lightingChange', lamps);
+	var lamp = req.body.lamp;
+	//console.log('Updating lighting status:', lamp);
+	for (var i = 0; i < lamps.length; i++) {
+		if (lamps[i].name == lamp.name) {
+			lamps[i].on = !lamps[i].on;
+			break;
+		}
+	}
+	console.log('Changed lamp: ' + lamp.name + ' to on:' + lamp.on);
+	io.emit('lightingChange', lamp);
 	res.status(200);
 	res.send();
 });
