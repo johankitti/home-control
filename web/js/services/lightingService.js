@@ -15,6 +15,11 @@
   };
 
   lightingService.prototype.updateLightingStatus = function(index) {
+    if (this.lamps[index].on == true) {
+      this.lamps[index].on = false;
+    } else {
+      this.lamps[index].on = true;
+    }
     this.restService.updateLightingStatus(this.lamps[index]);
   };
 
@@ -33,14 +38,16 @@
     return this.lamps[index];
   };
 
-  lightingService.prototype.setLampOnOff = function(index) {
-    //console.log(this.lamps[index]);
-    if (this.lamps[index].on == true) {
-      this.lamps[index].on = false;
-    } else {
-      this.lamps[index].on = true;
+  lightingService.prototype.updateAllLightingStatus = function(on) {
+    var state = false;
+    if (on) {
+      state = true;
     }
-    this.updateLightingStatus(index);
+    for (var i = 0; i < this.lamps.length; i++) {
+      if (this.lamps[i].on != state) {
+        this.updateLightingStatus(i);
+      }
+    }
   };
 
   homeDashboard.service('lightingService', lightingService);

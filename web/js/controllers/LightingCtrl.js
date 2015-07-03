@@ -24,9 +24,31 @@
     return this.lightingService.getLamp(index);
   };
 
-  LightingCtrl.prototype.setLampOnOff = function(index) {
-    this.lightingService.setLampOnOff(index);
+  LightingCtrl.prototype.updateLightingStatus = function(index) {
+    this.lightingService.updateLightingStatus(index);
   };
+
+  LightingCtrl.prototype.updateAllLightingStatus = function(on) {
+    this.lightingService.updateAllLightingStatus(on);
+  };
+
+  LightingCtrl.prototype.isAllOn = function(onOff) {
+    var numOn = 0;
+    var numOff = 0;
+    for (var i = 0; i < this.lightingService.lamps.length; i++) {
+      if (this.lightingService.lamps[i].on) {
+        numOn++;
+      } else {
+        numOff++;
+      }
+    }
+
+    if (onOff == 'on' && numOn == this.lightingService.lamps.length) {
+      return 'btn-primary'
+    } else if (onOff == 'off' && numOff == this.lightingService.lamps.length) {
+      return 'btn-danger';
+    }
+  }
 
   LightingCtrl.prototype.isOn = function(index, onOff) {
     if (this.lightingService.lamps[index]) {
