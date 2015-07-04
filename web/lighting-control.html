@@ -12,17 +12,13 @@
         <h1>Belysning</h1>
       </div>
       <div class="col-lg-12">
-        <label>
-          <button ng-click="lightingCtrl.updateAllLightingStatus(true)" class="btn btn-default navbar-btn" ng-class="lightingCtrl.isAllOn('on')">ON</button>
-          <button ng-click="lightingCtrl.updateAllLightingStatus(false)" class="btn btn-default navbar-btn" ng-class="lightingCtrl.isAllOn('off')">OFF</button>
-           All lamps
-        </label>
+        <button ng-click="lightingCtrl.updateAllLightingStatus(true)" class="btn btn-default btn-lg navbar-btn" ng-class="lightingCtrl.isAllOn('on')">ON</button>
+        <button ng-click="lightingCtrl.updateAllLightingStatus(false)" class="btn btn-default btn-lg navbar-btn" ng-class="lightingCtrl.isAllOn('off')">OFF</button>
+         All lamps
         <div ng-repeat="lamp in lightingCtrl.lightingService.lamps">
-          <label>
-            <button ng-click="lightingCtrl.updateLightingStatus($index)" class="btn btn-default navbar-btn" ng-class="lightingCtrl.isOn($index, 'on')">ON</button>
-            <button ng-click="lightingCtrl.updateLightingStatus($index)" class="btn btn-default navbar-btn" ng-class="lightingCtrl.isOn($index, 'off')">OFF</button>
-            {{($index + 1) + "." + lamp.name}}
-          </label>
+          <button ng-click="lightingCtrl.updateLightingStatus($index, 'on')" class="btn btn-default btn-lg navbar-btn" ng-class="lightingCtrl.isOn($index, 'on')">ON</button>
+          <button ng-click="lightingCtrl.updateLightingStatus($index, 'off')" class="btn btn-default btn-lg navbar-btn" ng-class="lightingCtrl.isOn($index, 'off')">OFF</button>
+          {{($index + 1) + "." + lamp.name}}
         </div>
         <div class="lampImages">
           <img src="./assets/images/ROOM.png" class="lampImage">

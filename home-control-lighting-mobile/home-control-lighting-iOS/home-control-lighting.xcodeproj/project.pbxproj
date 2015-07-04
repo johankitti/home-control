@@ -1,0 +1,433 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		160DC8091B4748FD007E44B8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 160DC8081B4748FD007E44B8 /* main.m */; };
+		160DC80C1B4748FD007E44B8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 160DC80B1B4748FD007E44B8 /* AppDelegate.m */; };
+		160DC80F1B4748FD007E44B8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 160DC80E1B4748FD007E44B8 /* ViewController.m */; };
+		160DC8121B4748FD007E44B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 160DC8101B4748FD007E44B8 /* Main.storyboard */; };
+		160DC8141B4748FD007E44B8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 160DC8131B4748FD007E44B8 /* Images.xcassets */; };
+		160DC8171B4748FD007E44B8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 160DC8151B4748FD007E44B8 /* LaunchScreen.xib */; };
+		160DC8231B4748FD007E44B8 /* home_control_lightingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 160DC8221B4748FD007E44B8 /* home_control_lightingTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		160DC81D1B4748FD007E44B8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 160DC7FB1B4748FD007E44B8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 160DC8021B4748FD007E44B8;
+			remoteInfo = "home-control-lighting";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		160DC8031B4748FD007E44B8 /* home-control-lighting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "home-control-lighting.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		160DC8071B4748FD007E44B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		160DC8081B4748FD007E44B8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		160DC80A1B4748FD007E44B8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		160DC80B1B4748FD007E44B8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		160DC80D1B4748FD007E44B8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		160DC80E1B4748FD007E44B8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		160DC8111B4748FD007E44B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		160DC8131B4748FD007E44B8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		160DC8161B4748FD007E44B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		160DC81C1B4748FD007E44B8 /* home-control-lightingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "home-control-lightingTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		160DC8211B4748FD007E44B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		160DC8221B4748FD007E44B8 /* home_control_lightingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = home_control_lightingTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		160DC8001B4748FD007E44B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		160DC8191B4748FD007E44B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		160DC7FA1B4748FD007E44B8 = {
+			isa = PBXGroup;
+			children = (
+				160DC8051B4748FD007E44B8 /* home-control-lighting */,
+				160DC81F1B4748FD007E44B8 /* home-control-lightingTests */,
+				160DC8041B4748FD007E44B8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		160DC8041B4748FD007E44B8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				160DC8031B4748FD007E44B8 /* home-control-lighting.app */,
+				160DC81C1B4748FD007E44B8 /* home-control-lightingTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		160DC8051B4748FD007E44B8 /* home-control-lighting */ = {
+			isa = PBXGroup;
+			children = (
+				160DC80A1B4748FD007E44B8 /* AppDelegate.h */,
+				160DC80B1B4748FD007E44B8 /* AppDelegate.m */,
+				160DC80D1B4748FD007E44B8 /* ViewController.h */,
+				160DC80E1B4748FD007E44B8 /* ViewController.m */,
+				160DC8101B4748FD007E44B8 /* Main.storyboard */,
+				160DC8131B4748FD007E44B8 /* Images.xcassets */,
+				160DC8151B4748FD007E44B8 /* LaunchScreen.xib */,
+				160DC8061B4748FD007E44B8 /* Supporting Files */,
+			);
+			path = "home-control-lighting";
+			sourceTree = "<group>";
+		};
+		160DC8061B4748FD007E44B8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				160DC8071B4748FD007E44B8 /* Info.plist */,
+				160DC8081B4748FD007E44B8 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		160DC81F1B4748FD007E44B8 /* home-control-lightingTests */ = {
+			isa = PBXGroup;
+			children = (
+				160DC8221B4748FD007E44B8 /* home_control_lightingTests.m */,
+				160DC8201B4748FD007E44B8 /* Supporting Files */,
+			);
+			path = "home-control-lightingTests";
+			sourceTree = "<group>";
+		};
+		160DC8201B4748FD007E44B8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				160DC8211B4748FD007E44B8 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		160DC8021B4748FD007E44B8 /* home-control-lighting */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 160DC8261B4748FD007E44B8 /* Build configuration list for PBXNativeTarget "home-control-lighting" */;
+			buildPhases = (
+				160DC7FF1B4748FD007E44B8 /* Sources */,
+				160DC8001B4748FD007E44B8 /* Frameworks */,
+				160DC8011B4748FD007E44B8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "home-control-lighting";
+			productName = "home-control-lighting";
+			productReference = 160DC8031B4748FD007E44B8 /* home-control-lighting.app */;
+			productType = "com.apple.product-type.application";
+		};
+		160DC81B1B4748FD007E44B8 /* home-control-lightingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 160DC8291B4748FD007E44B8 /* Build configuration list for PBXNativeTarget "home-control-lightingTests" */;
+			buildPhases = (
+				160DC8181B4748FD007E44B8 /* Sources */,
+				160DC8191B4748FD007E44B8 /* Frameworks */,
+				160DC81A1B4748FD007E44B8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				160DC81E1B4748FD007E44B8 /* PBXTargetDependency */,
+			);
+			name = "home-control-lightingTests";
+			productName = "home-control-lightingTests";
+			productReference = 160DC81C1B4748FD007E44B8 /* home-control-lightingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		160DC7FB1B4748FD007E44B8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Johan Kitti";
+				TargetAttributes = {
+					160DC8021B4748FD007E44B8 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					160DC81B1B4748FD007E44B8 = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = 160DC8021B4748FD007E44B8;
+					};
+				};
+			};
+			buildConfigurationList = 160DC7FE1B4748FD007E44B8 /* Build configuration list for PBXProject "home-control-lighting" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 160DC7FA1B4748FD007E44B8;
+			productRefGroup = 160DC8041B4748FD007E44B8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				160DC8021B4748FD007E44B8 /* home-control-lighting */,
+				160DC81B1B4748FD007E44B8 /* home-control-lightingTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		160DC8011B4748FD007E44B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				160DC8121B4748FD007E44B8 /* Main.storyboard in Resources */,
+				160DC8171B4748FD007E44B8 /* LaunchScreen.xib in Resources */,
+				160DC8141B4748FD007E44B8 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		160DC81A1B4748FD007E44B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		160DC7FF1B4748FD007E44B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				160DC80F1B4748FD007E44B8 /* ViewController.m in Sources */,
+				160DC80C1B4748FD007E44B8 /* AppDelegate.m in Sources */,
+				160DC8091B4748FD007E44B8 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		160DC8181B4748FD007E44B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				160DC8231B4748FD007E44B8 /* home_control_lightingTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		160DC81E1B4748FD007E44B8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 160DC8021B4748FD007E44B8 /* home-control-lighting */;
+			targetProxy = 160DC81D1B4748FD007E44B8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		160DC8101B4748FD007E44B8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				160DC8111B4748FD007E44B8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		160DC8151B4748FD007E44B8 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				160DC8161B4748FD007E44B8 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		160DC8241B4748FD007E44B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		160DC8251B4748FD007E44B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		160DC8271B4748FD007E44B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "home-control-lighting/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		160DC8281B4748FD007E44B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "home-control-lighting/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		160DC82A1B4748FD007E44B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "home-control-lightingTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/home-control-lighting.app/home-control-lighting";
+			};
+			name = Debug;
+		};
+		160DC82B1B4748FD007E44B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "home-control-lightingTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/home-control-lighting.app/home-control-lighting";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		160DC7FE1B4748FD007E44B8 /* Build configuration list for PBXProject "home-control-lighting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				160DC8241B4748FD007E44B8 /* Debug */,
+				160DC8251B4748FD007E44B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		160DC8261B4748FD007E44B8 /* Build configuration list for PBXNativeTarget "home-control-lighting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				160DC8271B4748FD007E44B8 /* Debug */,
+				160DC8281B4748FD007E44B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		160DC8291B4748FD007E44B8 /* Build configuration list for PBXNativeTarget "home-control-lightingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				160DC82A1B4748FD007E44B8 /* Debug */,
+				160DC82B1B4748FD007E44B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 160DC7FB1B4748FD007E44B8 /* Project object */;
+}

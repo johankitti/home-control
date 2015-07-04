@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E17e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TW9-23-SAr">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="600" id="EF4-uY-nrR"/>
+                                    <constraint firstAttribute="height" constant="600" id="KbD-3T-kRT"/>
+                                    <constraint firstAttribute="width" constant="600" id="OPO-DY-nVE"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="600" id="VOg-Bm-eaO"/>
+                                    <constraint firstAttribute="width" constant="600" id="pOA-gX-uTh"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="600" id="sfs-O0-dNO"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="EF4-uY-nrR"/>
+                                        <exclude reference="KbD-3T-kRT"/>
+                                        <exclude reference="OPO-DY-nVE"/>
+                                        <exclude reference="VOg-Bm-eaO"/>
+                                        <exclude reference="pOA-gX-uTh"/>
+                                        <exclude reference="sfs-O0-dNO"/>
+                                    </mask>
+                                </variation>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TW9-23-SAr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="2lp-xO-qqb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TW9-23-SAr" secondAttribute="trailing" constant="-16" id="4xj-og-had"/>
+                            <constraint firstItem="TW9-23-SAr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="BIe-am-lCZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TW9-23-SAr" secondAttribute="trailing" id="PQd-5i-G3z"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TW9-23-SAr" secondAttribute="trailing" id="VHM-PB-rQW"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="TW9-23-SAr" secondAttribute="bottom" id="a8G-10-Rac"/>
+                            <constraint firstItem="TW9-23-SAr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="v5g-bR-Zsc"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="2lp-xO-qqb"/>
+                                <exclude reference="PQd-5i-G3z"/>
+                                <exclude reference="VHM-PB-rQW"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="TW9-23-SAr" id="E0x-hT-kSY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="440" y="217"/>
+        </scene>
+    </scenes>
+</document>

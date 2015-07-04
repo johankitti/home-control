@@ -24,7 +24,8 @@
     return this.lightingService.getLamp(index);
   };
 
-  LightingCtrl.prototype.updateLightingStatus = function(index) {
+  LightingCtrl.prototype.updateLightingStatus = function(index, on) {
+    console.log('updating for button: ' + on);
     this.lightingService.updateLightingStatus(index);
   };
 

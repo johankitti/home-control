@@ -15,9 +15,12 @@
   };
 
   lightingService.prototype.updateLightingStatus = function(index) {
-    if (this.lamps[index].on == true) {
+    var on = this.lamps[index].on;
+    if (on == true) {
+      console.log('bajs');
       this.lamps[index].on = false;
     } else {
+      console.log('majs');
       this.lamps[index].on = true;
     }
     this.restService.updateLightingStatus(this.lamps[index]);
