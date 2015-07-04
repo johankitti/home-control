@@ -1,4 +1,4 @@
-package com.lab.kitti.homecontrollighting;
+package com.home_control.home_control_lighting;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

@@ -5,7 +5,7 @@ android {
     buildToolsVersion "21.1.2"
 
     defaultConfig {
-        applicationId "com.lab.kitti.homecontrollighting"
+        applicationId "com.home_control.home_control_lighting"
         minSdkVersion 18
         targetSdkVersion 21
         versionCode 1

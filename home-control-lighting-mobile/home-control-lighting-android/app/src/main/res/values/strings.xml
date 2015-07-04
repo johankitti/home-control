@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">HomeControlLighting</string>
+    <string name="app_name">home-control-lighting</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
