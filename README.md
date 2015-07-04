@@ -6,7 +6,7 @@ Raspberry Pi
 ============
 /etc/init.d/node-autostart.sh - to autostart node server create the following file:
 
-```
+```bash
 #! /bin/sh
 # /etc/init.d/node-autostart
 
@@ -53,9 +53,13 @@ General guidelines
 - $scope is only to be used when there is no other way to solve a problem
 - In html, controllers are declared like: "AppCtrl as appCtrl".
 
+iOS/Android Lighting App
+============
+Applications for both iOS and Android are now available to control the lighting.
+
 Controllers/Services
 ============
-```
+```javascript
 (function () {
     'use strict';
     var AppCtrl = function ($scope, someService) {
@@ -76,7 +80,7 @@ Controllers/Services
 
 Filters
 ============
-```
+```javascript
 (function () {
     'use strict';
     yourAmazingApp.filter('someFilter', function () {
