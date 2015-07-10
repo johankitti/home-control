@@ -5,6 +5,7 @@ var http = require('http');
 var bodyParser = require('body-parser');
 var socket = require('socket.io');
 var tellstick = require('tellstick');
+var os = require('os');
 
 // Setup server
 var app = express();
@@ -119,7 +120,12 @@ app.route('/lighting')
 
 
 // tellstickvar
-var td = tellstick(); // Leave blanc for mac
+var tdtoolPath = null;
+var currOs = os.platform().toLowerCase();
+if (currOs == 'linux') { //Change the path to tdtool for linux
+	tdtoolPath = '/usr/bin/'
+}
+var td = tellstick(tdtoolPath); // Leave blanc for mac
 
 // list all registered devices and prepare
 console.log('Lamps:');
