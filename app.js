@@ -40,9 +40,7 @@ app.get('/tjena', function(req, res){
 });
 
 // LIGHTING API
-var lamps = [
-	{name: 'Hallen', on: false},
-];
+var lamps = [];
 
 app.get('/api/lighting', function(req, res) {
 	res.send(lamps);
@@ -121,14 +119,15 @@ app.route('/lighting')
 
 
 // tellstickvar
-var td = tellstick();
+var td = tellstick('/usr/bin/'); // Leave blanc for mac
 
-var realLamps = [];
 // list all registered devices and prepare
 console.log('Lamps:');
 td.list(function(err, list){
 	lamps = list;
-	for (var i = 0; i < lamps.length; i++) {
-		console.log('Name: ' + lamps[i].name + ' is: ' + lamps[i].on);
+	if (lamps) {
+		for (var i = 0; i < lamps.length; i++) {
+			console.log('Name: ' + lamps[i].name + ' is: ' + lamps[i].on);
+		}
 	}
 });
