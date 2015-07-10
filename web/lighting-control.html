@@ -15,16 +15,16 @@
         <button ng-click="lightingCtrl.updateAllLightingStatus(true)" class="btn btn-default btn-lg navbar-btn" ng-class="lightingCtrl.isAllOn('on')">ON</button>
         <button ng-click="lightingCtrl.updateAllLightingStatus(false)" class="btn btn-default btn-lg navbar-btn" ng-class="lightingCtrl.isAllOn('off')">OFF</button>
          All lamps
-        <div ng-repeat="lamp in lightingCtrl.lightingService.lamps">
+        <div ng-repeat="lamp in lightingCtrl.lightingService.lamps | orderBy:'id'">
           <button ng-click="lightingCtrl.updateLightingStatus($index, 'on')" class="btn btn-default btn-lg navbar-btn" ng-class="lightingCtrl.isOn($index, 'on')">ON</button>
           <button ng-click="lightingCtrl.updateLightingStatus($index, 'off')" class="btn btn-default btn-lg navbar-btn" ng-class="lightingCtrl.isOn($index, 'off')">OFF</button>
-          {{($index + 1) + "." + lamp.name}}
+          {{(lamp.id) + "." + lamp.name}}
         </div>
         <div class="lampImages">
           <img src="./assets/images/ROOM.png" class="lampImage">
           <div ng-repeat="lamp in lightingCtrl.lightingService.lamps">
             <div ng-show="lamp.on">
-              <img ng-src="{{'./assets/images/lamp' + ($index + 1) + '.png'}}" class="lampImage">
+              <img ng-src="{{'./assets/images/lamp' + (lamp.id) + '.png'}}" class="lampImage">
             </div>
           </div>
           <img src="./assets/images/numbers.png" class="lampImage">

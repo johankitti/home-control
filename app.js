@@ -4,6 +4,7 @@ var express = require('express');
 var http = require('http');
 var bodyParser = require('body-parser');
 var socket = require('socket.io');
+var tellstick = require('tellstick');
 
 // Setup server
 var app = express();
@@ -41,12 +42,6 @@ app.get('/tjena', function(req, res){
 // LIGHTING API
 var lamps = [
 	{name: 'Hallen', on: false},
-	{name: 'Vardagsrum (Slinga)', on: false},
-	{name: 'Vardagsrum (Golv)', on: false},
-	{name: 'Vardagsrum (Fönster)', on: true},
-	{name: 'Kök (Fönster)', on: false},
-	{name: 'Kök (Matbord)', on: false},
-	{name: 'Sovrum', on: false}
 ];
 
 app.get('/api/lighting', function(req, res) {
@@ -55,14 +50,27 @@ app.get('/api/lighting', function(req, res) {
 
 app.post('/api/lighting/', function(req, res) {
 	var lamp = req.body.lamp;
-	//console.log('Updating lighting status:', lamp);
+	console.log(lamp);
 	for (var i = 0; i < lamps.length; i++) {
-		if (lamps[i].name == lamp.name) {
-			lamps[i].on = !lamps[i].on;
+		if (lamps[i].id == lamp.id) {
+			if (lamps[i].on == true) {
+				td.turnOff(lamps[i].id, function(err){
+				  if(!err) {
+						lamps[i].on = false;
+						console.log(lamps[i].name + ' is turned off');
+					}
+				});
+			} else {
+				td.turnOn(lamps[i].id, function(err){
+				  if(!err) {
+						lamps[i].on = true;
+						console.log(lamps[i].name + ' is turned on');
+					}
+				});
+			}
 			break;
 		}
 	}
-	console.log('Changed lamp: ' + lamp.name + ' to on:' + lamp.on);
 	io.emit('lightingChange', lamp);
 	res.status(200);
 	res.send();
@@ -109,4 +117,18 @@ app.get('/api/transport/:key/:dest/:station/:exclude', function(req, res) {
 app.route('/lighting')
   .get(function(req, res) {
 	res.sendfile("lighting-control.html", { root: __dirname + "/web" });
+});
+
+
+// tellstickvar
+var td = tellstick();
+
+var realLamps = [];
+// list all registered devices and prepare
+console.log('Lamps:');
+td.list(function(err, list){
+	lamps = list;
+	for (var i = 0; i < lamps.length; i++) {
+		console.log('Name: ' + lamps[i].name + ' is: ' + lamps[i].on);
+	}
 });

@@ -21,6 +21,6 @@ public class MainWebActivity extends ActionBarActivity {
         webSettings.setJavaScriptEnabled(true);
         webSettings.setDomStorageEnabled(true);
         myWebView.setWebChromeClient(new WebChromeClient());
-        myWebView.loadUrl("http://192.168.0.12:8080/lighting");
+        myWebView.loadUrl("http://192.168.0.17:8080/lighting");
     }
 }
