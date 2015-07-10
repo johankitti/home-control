@@ -10,7 +10,7 @@
       <img src="./assets/images/ROOM.png" class="lampImage">
       <div ng-repeat="lamp in lightingCtrl.lightingService.lamps">
         <div ng-show="lamp.on">
-          <img ng-src="{{'./assets/images/lamp' + ($index + 1) + '.png'}}" class="lampImage">
+          <img ng-src="{{'./assets/images/lamp' + (lamp.id) + '.png'}}" class="lampImage">
           <p class="lampImage lampText"  style="margin-top:{{50 + ($index - 1) * 20}}px;">{{($index + 1) + "." + lamp.name}} </p>
         </div>
       </div>

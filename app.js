@@ -119,7 +119,7 @@ app.route('/lighting')
 
 
 // tellstickvar
-var td = tellstick('/usr/bin/'); // Leave blanc for mac
+var td = tellstick(); // Leave blanc for mac
 
 // list all registered devices and prepare
 console.log('Lamps:');
