@@ -120,11 +120,20 @@ app.route('/lighting')
 
 
 // tellstickvar
-var tdtoolPath = null;
+var tdtoolPath = '';
 var currOs = os.platform().toLowerCase();
-if (currOs == 'linux') { //Change the path to tdtool for linux
-	tdtoolPath = '/usr/bin/'
+switch (currOs) {
+	case 'linux':
+		tdtoolPath = '/usr/bin/';
+		break;
+
+	case 'darwin':
+		tdtoolPath = '/usr/local/bin/';
+
+	default:
+		tdtoolPath = '/usr/local/bin/';
 }
+console.log('You are on a ' + currOs + ' system.');
 var td = tellstick(tdtoolPath); // Leave blanc for mac
 
 // list all registered devices and prepare
