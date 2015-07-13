@@ -16,8 +16,8 @@
         <button ng-click="lightingCtrl.updateAllLightingStatus(false)" class="btn btn-default btn-lg navbar-btn" ng-class="lightingCtrl.isAllOn('off')">OFF</button>
          All lamps
         <div ng-repeat="lamp in lightingCtrl.lightingService.lamps | orderBy:'id'">
-          <button ng-click="lightingCtrl.updateLightingStatus($index, 'on')" class="btn btn-default btn-lg navbar-btn" ng-class="lightingCtrl.isOn($index, 'on')">ON</button>
-          <button ng-click="lightingCtrl.updateLightingStatus($index, 'off')" class="btn btn-default btn-lg navbar-btn" ng-class="lightingCtrl.isOn($index, 'off')">OFF</button>
+          <button ng-click="lightingCtrl.updateLightingStatus(lamp.id, 'on')" class="btn btn-default btn-lg navbar-btn" ng-class="lightingCtrl.isOn(lamp.id, 'on')">ON</button>
+          <button ng-click="lightingCtrl.updateLightingStatus(lamp.id, 'off')" class="btn btn-default btn-lg navbar-btn" ng-class="lightingCtrl.isOn(lamp.id, 'off')">OFF</button>
           {{(lamp.id) + "." + lamp.name}}
         </div>
         <div class="lampImages">
