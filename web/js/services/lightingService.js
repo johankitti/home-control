@@ -14,13 +14,18 @@
     this.loadLightingInfo();
   };
 
-  lightingService.prototype.updateLightingStatus = function(index) {
+  lightingService.prototype.updateLightingStatus = function(id) {
+    var index = -1;
+    for (var i = 0; i < this.lamps.length; i++) {
+      if (this.lamps[i].id == id) {
+        index = i;
+        break;
+      }
+    }
     var on = this.lamps[index].on;
     if (on == true) {
-      console.log('bajs');
       this.lamps[index].on = false;
     } else {
-      console.log('majs');
       this.lamps[index].on = true;
     }
     this.restService.updateLightingStatus(this.lamps[index]);

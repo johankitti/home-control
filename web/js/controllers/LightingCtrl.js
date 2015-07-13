@@ -24,9 +24,9 @@
     return this.lightingService.getLamp(index);
   };
 
-  LightingCtrl.prototype.updateLightingStatus = function(index, on) {
+  LightingCtrl.prototype.updateLightingStatus = function(id, on) {
     console.log('updating for button: ' + on);
-    this.lightingService.updateLightingStatus(index);
+    this.lightingService.updateLightingStatus(id);
   };
 
   LightingCtrl.prototype.updateAllLightingStatus = function(on) {
@@ -51,9 +51,16 @@
     }
   }
 
-  LightingCtrl.prototype.isOn = function(index, onOff) {
-    if (this.lightingService.lamps[index]) {
-      var isOn = this.lightingService.lamps[index].on;
+  LightingCtrl.prototype.isOn = function(id, onOff) {
+    var lamp = {};
+    for (var i = 0; i < this.lightingService.lamps.length; i++) {
+      if (this.lightingService.lamps[i].id == id) {
+        this.lamp = this.lightingService.lamps[i];
+        break;
+      }
+    }
+    if (lamp) {
+      var isOn = lamp.on;
       if (isOn) {
         if (onOff == 'on') {
           return 'btn-primary'
