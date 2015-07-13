@@ -14,7 +14,7 @@
     this.loadLightingInfo();
   };
 
-  lightingService.prototype.updateLightingStatus = function(id) {
+  lightingService.prototype.updateLightingStatus = function(id, on) {
     var index = -1;
     for (var i = 0; i < this.lamps.length; i++) {
       if (this.lamps[i].id == id) {
@@ -31,6 +31,19 @@
     this.restService.updateLightingStatus(this.lamps[index]);
   };
 
+  lightingService.prototype.updateAllLightingStatus = function(on) {
+    var state = false;
+    if (on == true) {
+      state = true;
+    }
+    for (var i = 0; i < this.lamps.length; i++) {
+      var lamp = this.lamps[i];
+      if (lamp.on != state) {
+        this.updateLightingStatus(lamp.id, state);
+      }
+    }
+  };
+
   lightingService.prototype.loadLightingInfo = function() {
     this.lamps = this.restService.loadLightingInfo();
     this.restService.loadLightingInfo()
@@ -44,18 +57,6 @@
 
   lightingService.prototype.getLamp = function(index) {
     return this.lamps[index];
-  };
-
-  lightingService.prototype.updateAllLightingStatus = function(on) {
-    var state = false;
-    if (on) {
-      state = true;
-    }
-    for (var i = 0; i < this.lamps.length; i++) {
-      if (this.lamps[i].on != state) {
-        this.updateLightingStatus(i);
-      }
-    }
   };
 
   homeDashboard.service('lightingService', lightingService);

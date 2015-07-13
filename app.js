@@ -35,9 +35,9 @@ app.all("/", function(req, res, next) {
 });
 
 	// TEST PING
-app.get('/tjena', function(req, res){
+app.get('/ping', function(req, res){
 	res.status(200);
-  res.send('hello world');
+  res.send('pong');
 });
 
 // LIGHTING API

@@ -25,15 +25,14 @@
   };
 
   LightingCtrl.prototype.updateLightingStatus = function(id, on) {
-    console.log('updating for button: ' + on);
-    this.lightingService.updateLightingStatus(id);
+    this.lightingService.updateLightingStatus(id, on);
   };
 
   LightingCtrl.prototype.updateAllLightingStatus = function(on) {
     this.lightingService.updateAllLightingStatus(on);
   };
 
-  LightingCtrl.prototype.isAllOn = function(onOff) {
+  LightingCtrl.prototype.isAllOn = function(on) {
     var numOn = 0;
     var numOff = 0;
     for (var i = 0; i < this.lightingService.lamps.length; i++) {
@@ -44,31 +43,31 @@
       }
     }
 
-    if (onOff == 'on' && numOn == this.lightingService.lamps.length) {
+    if (on == true && numOn == this.lightingService.lamps.length) {
       return 'btn-primary'
-    } else if (onOff == 'off' && numOff == this.lightingService.lamps.length) {
+    } else if (on == false && numOff == this.lightingService.lamps.length) {
       return 'btn-danger';
     }
   }
 
-  LightingCtrl.prototype.isOn = function(id, onOff) {
-    var lamp = {};
+  LightingCtrl.prototype.isOn = function(id, on) {
+    var index = -1;
     for (var i = 0; i < this.lightingService.lamps.length; i++) {
       if (this.lightingService.lamps[i].id == id) {
-        this.lamp = this.lightingService.lamps[i];
+        index = i;
         break;
       }
     }
-    if (lamp) {
-      var isOn = lamp.on;
+    if (this.lightingService.lamps[i]) {
+      var isOn = this.lightingService.lamps[i].on;
       if (isOn) {
-        if (onOff == 'on') {
+        if (on == true) {
           return 'btn-primary'
         } else {
           return '';
         }
       } else {
-        if (onOff == 'off'){
+        if (on == false){
          return 'btn-danger'
        } else {
          return '';
