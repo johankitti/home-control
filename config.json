@@ -1,0 +1,13 @@
+{
+  "transportation": {
+    "apiKey": ""
+  },
+  "instagram": {
+    "user": "",
+    "apiKey": "",
+    "apiSecret": ""
+  },
+  "gcal": {
+    "apiKey": ""
+  }
+}

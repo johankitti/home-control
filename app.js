@@ -6,6 +6,7 @@ var bodyParser = require('body-parser');
 var socket = require('socket.io');
 var tellstick = require('tellstick');
 var os = require('os');
+var config = require('./config.json');
 
 // Setup server
 var app = express();
@@ -38,6 +39,37 @@ app.all("/", function(req, res, next) {
 app.get('/ping', function(req, res){
 	res.status(200);
   res.send('pong');
+});
+
+// GET CONFIG
+app.get('/config', function(req, res){
+	res.status(200);
+	res.send(config);
+});
+
+// GCAL API
+app.get('/api/gcal/:calendarid/:timemax/:timemin', function(req, res){
+	var url = '/calendar/v3/calendars/' +
+	req.params.calendarid + '/events?timeMax=' + req.params.timemax +
+	'&timeMin=' + req.params.timemin + '&key=' + config.gcal.apiKey;
+	res.status(200);
+
+	var options = {
+		host: 'https://www.googleapis.com',
+		path: url
+	};
+
+	http.request(options, function(response) {
+    var str = '';
+
+    response.on('data', function (chunk) {
+      str += chunk;
+    });
+
+    response.on('end', function () {
+      res.send(str);
+    });
+  }).end();
 });
 
 // LIGHTING API
@@ -76,11 +108,11 @@ app.post('/api/lighting/', function(req, res) {
 });
 
 // INSTAGRAM API
-app.get('/api/instagram/:key/:secret/:user', function(req, res) {
+app.get('/api/instagram/', function(req, res) {
   var ig = require('instagram-node-lib');
-  ig.set('client_id', req.params.key);
+  ig.set('client_id', config.instagram.apiKey);
   ig.users.recent({
-    user_id: req.params.user,
+    user_id: config.instagram.user,
     complete: function(data) {
       res.send(data);
     }
@@ -88,9 +120,10 @@ app.get('/api/instagram/:key/:secret/:user', function(req, res) {
 });
 
 // TRANSPORT API
-app.get('/api/transport/:key/:dest/:station/:exclude', function(req, res) {
-  var url = '/api2/TravelplannerV2/trip.json?key=' + req.params.key + '&originId=' + req.params.station +
-    '&destId=' + req.params.dest + req.params.exclude;
+app.get('/api/transport/:dest/:station/:exclude', function(req, res) {
+  var url = '/api2/TravelplannerV2/trip.json?key=' + config.transportation.apiKey +
+	'&originId=' + req.params.station + '&destId=' + req.params.dest +
+	req.params.exclude;
 
   console.log(url);
   var options = {
@@ -101,12 +134,10 @@ app.get('/api/transport/:key/:dest/:station/:exclude', function(req, res) {
   http.request(options, function(response) {
     var str = '';
 
-    //another chunk of data has been recieved, so append it to `str`
     response.on('data', function (chunk) {
       str += chunk;
     });
 
-    //the whole response has been recieved, so we just print it out here
     response.on('end', function () {
       res.send(str);
     });

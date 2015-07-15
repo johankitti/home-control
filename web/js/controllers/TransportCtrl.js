@@ -82,20 +82,22 @@
         this.transportTimers[j].departures.push(this.getCurrentTime());
         //window.console.log(this.transportTimers[j].departures);
       }
-      for (var i = 0; i < data.Trip.length; i++) {
-        var departure = '';
-        if (data.Trip[i].LegList.Leg.constructor !== Array) {
-          departure = data.Trip[i].LegList.Leg.Origin.time;
-          if (this.transportTimers[j].departures.indexOf(departure) === -1) {
-            this.transportTimers[j].departures.push(departure);
+      if (data.Trip) {
+        for (var i = 0; i < data.Trip.length; i++) {
+          var departure = '';
+          if (data.Trip[i].LegList.Leg.constructor !== Array) {
+            departure = data.Trip[i].LegList.Leg.Origin.time;
+            if (this.transportTimers[j].departures.indexOf(departure) === -1) {
+              this.transportTimers[j].departures.push(departure);
+            }
           }
-        }
-        else {
-          departure = data.Trip[i].LegList.Leg[0].Origin.time;
-          if (this.transportTimers[j].departures.indexOf(departure) === -1) {
-            this.transportTimers[j].departures.push(departure);
+          else {
+            departure = data.Trip[i].LegList.Leg[0].Origin.time;
+            if (this.transportTimers[j].departures.indexOf(departure) === -1) {
+              this.transportTimers[j].departures.push(departure);
+            }
           }
-        }
+        }  
       }
       //window.console.log(this.transportTimers);
       }.bind(this, j));
