@@ -1,13 +1,13 @@
 {
   "transportation": {
-    "apiKey": ""
+    "apiKey": "1bb9289097dc4600aa260b49b9363245"
   },
   "instagram": {
-    "user": "",
-    "apiKey": "",
-    "apiSecret": ""
+    "user": "12884878",
+    "apiKey": "0fed51a221ae4a1c9826124c163280ef",
+    "apiSecret": "e4f83bd883db42799f4e7d52223e68da"
   },
   "gcal": {
-    "apiKey": ""
+    "apiKey": "AIzaSyDyP7EFmzjuK6Z9TqSbbhVLOIQRgBNmdYI"
   }
 }

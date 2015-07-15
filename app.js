@@ -2,6 +2,7 @@
 
 var express = require('express');
 var http = require('http');
+var https = require('https');
 var bodyParser = require('body-parser');
 var socket = require('socket.io');
 var tellstick = require('tellstick');
@@ -41,35 +42,29 @@ app.get('/ping', function(req, res){
   res.send('pong');
 });
 
-// GET CONFIG
-app.get('/config', function(req, res){
-	res.status(200);
-	res.send(config);
-});
-
 // GCAL API
 app.get('/api/gcal/:calendarid/:timemax/:timemin', function(req, res){
-	var url = '/calendar/v3/calendars/' +
-	req.params.calendarid + '/events?timeMax=' + req.params.timemax +
-	'&timeMin=' + req.params.timemin + '&key=' + config.gcal.apiKey;
-	res.status(200);
+	var host = 'https://www.googleapis.com';
+	var url = '/calendar/v3/calendars/' + req.params.calendarid + '/events?timeMin=2015-07-15T00%3A00%3A00%2B02%3A00&alwaysIncludeEmail=true&timeMax=2015-07-15T23%3A59%3A59%2B02%3A00&key=AIzaSyDyP7EFmzjuK6Z9TqSbbhVLOIQRgBNmdYI';
 
-	var options = {
-		host: 'https://www.googleapis.com',
-		path: url
-	};
+	https.get(host + url, function(response) {
+	  console.log("Got response from Google Apis with code: " + response.statusCode);
+		var str = '';
 
-	http.request(options, function(response) {
-    var str = '';
+		response.on('data', function(chunk) {
+			str += chunk;
+		});
 
-    response.on('data', function (chunk) {
-      str += chunk;
-    });
+		response.on('end', function() {
+			res.status(200);
+			res.send(str);
+		});
 
-    response.on('end', function () {
-      res.send(str);
-    });
-  }).end();
+	}).on('error', function(e) {
+	  console.log("Got error: " + e.message);
+		res.status(400);
+		res.send();
+	});
 });
 
 // LIGHTING API
@@ -108,7 +103,7 @@ app.post('/api/lighting/', function(req, res) {
 });
 
 // INSTAGRAM API
-app.get('/api/instagram/', function(req, res) {
+app.get('/api/instagram', function(req, res) {
   var ig = require('instagram-node-lib');
   ig.set('client_id', config.instagram.apiKey);
   ig.users.recent({
@@ -124,8 +119,6 @@ app.get('/api/transport/:dest/:station/:exclude', function(req, res) {
   var url = '/api2/TravelplannerV2/trip.json?key=' + config.transportation.apiKey +
 	'&originId=' + req.params.station + '&destId=' + req.params.dest +
 	req.params.exclude;
-
-  console.log(url);
   var options = {
     host: 'api.sl.se',
     path: url
